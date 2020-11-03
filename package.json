@@ -1,6 +1,6 @@
 {
   "name": "datascore-reactjs",
-  "homepage": "http://asdse.github.io/datascore-reactjs"
+  "homepage": "http://asdse.github.io/datascore-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

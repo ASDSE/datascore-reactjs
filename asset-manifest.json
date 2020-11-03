@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/datascore-reactjs/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/datascore-reactjs/static/js/main.3a2eba54.chunk.js",
+    "main.js.map": "/datascore-reactjs/static/js/main.3a2eba54.chunk.js.map",
+    "runtime-main.js": "/datascore-reactjs/static/js/runtime-main.799ad9d7.js",
+    "runtime-main.js.map": "/datascore-reactjs/static/js/runtime-main.799ad9d7.js.map",
+    "static/js/2.f4978f09.chunk.js": "/datascore-reactjs/static/js/2.f4978f09.chunk.js",
+    "static/js/2.f4978f09.chunk.js.map": "/datascore-reactjs/static/js/2.f4978f09.chunk.js.map",
+    "static/js/3.c5a0752c.chunk.js": "/datascore-reactjs/static/js/3.c5a0752c.chunk.js",
+    "static/js/3.c5a0752c.chunk.js.map": "/datascore-reactjs/static/js/3.c5a0752c.chunk.js.map",
+    "index.html": "/datascore-reactjs/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/datascore-reactjs/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.f4978f09.chunk.js.LICENSE.txt": "/datascore-reactjs/static/js/2.f4978f09.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/datascore-reactjs/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.799ad9d7.js",
+    "static/js/2.f4978f09.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.3a2eba54.chunk.js"
+  ]
+}

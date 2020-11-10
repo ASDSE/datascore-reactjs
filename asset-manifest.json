@@ -1,20 +1,40 @@
 {
   "files": {
-    "main.css": "/datascore-reactjs/static/css/main.e445e38f.chunk.css",
-    "main.js": "/datascore-reactjs/static/js/main.f6e9f6f8.chunk.js",
-    "main.js.map": "/datascore-reactjs/static/js/main.f6e9f6f8.chunk.js.map",
+    "main.css": "/datascore-reactjs/static/css/main.b87fc4ce.chunk.css",
+    "main.js": "/datascore-reactjs/static/js/main.7f352cdc.chunk.js",
+    "main.js.map": "/datascore-reactjs/static/js/main.7f352cdc.chunk.js.map",
     "runtime-main.js": "/datascore-reactjs/static/js/runtime-main.abc527c3.js",
     "runtime-main.js.map": "/datascore-reactjs/static/js/runtime-main.abc527c3.js.map",
-    "static/js/2.37588ac2.chunk.js": "/datascore-reactjs/static/js/2.37588ac2.chunk.js",
-    "static/js/2.37588ac2.chunk.js.map": "/datascore-reactjs/static/js/2.37588ac2.chunk.js.map",
+    "static/css/2.4d9207ef.chunk.css": "/datascore-reactjs/static/css/2.4d9207ef.chunk.css",
+    "static/js/2.14f30fd9.chunk.js": "/datascore-reactjs/static/js/2.14f30fd9.chunk.js",
+    "static/js/2.14f30fd9.chunk.js.map": "/datascore-reactjs/static/js/2.14f30fd9.chunk.js.map",
     "index.html": "/datascore-reactjs/index.html",
-    "static/css/main.e445e38f.chunk.css.map": "/datascore-reactjs/static/css/main.e445e38f.chunk.css.map",
-    "static/js/2.37588ac2.chunk.js.LICENSE.txt": "/datascore-reactjs/static/js/2.37588ac2.chunk.js.LICENSE.txt"
+    "static/css/2.4d9207ef.chunk.css.map": "/datascore-reactjs/static/css/2.4d9207ef.chunk.css.map",
+    "static/css/main.b87fc4ce.chunk.css.map": "/datascore-reactjs/static/css/main.b87fc4ce.chunk.css.map",
+    "static/js/2.14f30fd9.chunk.js.LICENSE.txt": "/datascore-reactjs/static/js/2.14f30fd9.chunk.js.LICENSE.txt",
+    "static/js/main.7f352cdc.chunk.js.LICENSE.txt": "/datascore-reactjs/static/js/main.7f352cdc.chunk.js.LICENSE.txt",
+    "static/media/angular.jpg": "/datascore-reactjs/static/media/angular.b5045666.jpg",
+    "static/media/argon-react-white.png": "/datascore-reactjs/static/media/argon-react-white.e4dd3b41.png",
+    "static/media/argon-react.png": "/datascore-reactjs/static/media/argon-react.128d71d3.png",
+    "static/media/bootstrap.jpg": "/datascore-reactjs/static/media/bootstrap.bd712487.jpg",
+    "static/media/all.min.css": "/datascore-reactjs/static/media/fa-solid-900.afbdcbcc.woff",
+    "static/media/github.svg": "/datascore-reactjs/static/media/github.6c955556.svg",
+    "static/media/google.svg": "/datascore-reactjs/static/media/google.eae9aa93.svg",
+    "static/media/nucleo.css": "/datascore-reactjs/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/profile-cover.jpg": "/datascore-reactjs/static/media/profile-cover.97899245.jpg",
+    "static/media/react.jpg": "/datascore-reactjs/static/media/react.0e8c9066.jpg",
+    "static/media/sketch.jpg": "/datascore-reactjs/static/media/sketch.a6af780a.jpg",
+    "static/media/team-1-800x800.jpg": "/datascore-reactjs/static/media/team-1-800x800.fa5a7ac2.jpg",
+    "static/media/team-2-800x800.jpg": "/datascore-reactjs/static/media/team-2-800x800.3e08ef14.jpg",
+    "static/media/team-3-800x800.jpg": "/datascore-reactjs/static/media/team-3-800x800.70911cdd.jpg",
+    "static/media/team-4-800x800.jpg": "/datascore-reactjs/static/media/team-4-800x800.99c612eb.jpg",
+    "static/media/vue.jpg": "/datascore-reactjs/static/media/vue.43bd93a8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.abc527c3.js",
-    "static/js/2.37588ac2.chunk.js",
-    "static/css/main.e445e38f.chunk.css",
-    "static/js/main.f6e9f6f8.chunk.js"
+    "static/css/2.4d9207ef.chunk.css",
+    "static/js/2.14f30fd9.chunk.js",
+    "static/css/main.b87fc4ce.chunk.css",
+    "static/js/main.7f352cdc.chunk.js"
   ]
 }

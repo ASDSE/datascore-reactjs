@@ -1,6 +1,6 @@
 {
   "name": "datascore-reactjs",
-  "homepage": "http://asdse.github.io/datascore-reactjs",
+  "homepage": "https://demos.creative-tim.com/argon-dashboard-react/",
   "version": "1.1.0",
   "description": "DORA4KIT",
   "main": "index.js",
@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/argon-dashboard-react/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -32,7 +31,8 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
     "minify-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true"
+    "map-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,7 +57,7 @@
     "react-dom": "16.12.0",
     "react-google-maps": "9.4.5",
     "react-router-dom": "5.1.2",
-    "react-scripts": "3.3.1",
+    "react-scripts": "^4.0.0",
     "reactstrap": "8.4.1"
   },
   "devDependencies": {
@@ -67,6 +67,7 @@
     "eslint-plugin-flowtype": "3.13.0",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
-    "typescript": "3.7.5"
+    "typescript": "3.7.5",
+    "gh-pages": "^3.1.0"
   }
 }

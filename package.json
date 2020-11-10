@@ -19,7 +19,7 @@
     "argon-dashboard",
     "argon-dashboard-react"
   ],
-  "author": "Creative Tim",
+  "author": "Dr. Stephan Sinn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
@@ -33,10 +33,14 @@
     "compile-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
     "minify-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
     "map-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": [
     ">0.2%",

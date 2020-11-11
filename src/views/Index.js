@@ -47,6 +47,7 @@ import {
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
+import AdminNavbar from "components/Navbars/AdminNavbar.js";
 
 class Index extends React.Component {
   constructor(props){

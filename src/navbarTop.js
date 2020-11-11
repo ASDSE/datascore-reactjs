@@ -1,10 +1,13 @@
 import React from 'react'
+import { Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom'
 
 function NavbarTop() {
   return(
     <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" exact activeStyle={
+            {color:'red'}
+          }>Home</NavLink>
         </li>
         <li>
           <Link to="/about">About</Link>
@@ -15,3 +18,5 @@ function NavbarTop() {
     </ul>
   );
 }
+
+export default NavbarTop

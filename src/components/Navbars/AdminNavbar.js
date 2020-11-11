@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "assets/img/brand/logo196.png";
 // reactstrap components
 import {
   DropdownMenu,
@@ -38,14 +39,19 @@ import {
 class AdminNavbar extends React.Component {
   render() {
     return (
-      <>
+
         <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
           <Container fluid>
             <Link
               className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
               to="/"
             >
-              {this.props.brandText}
+            <img
+              alt="..."
+              src={logo}
+              width='100'
+              height='100'
+            />
             </Link>
             <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
               <FormGroup className="mb-0">
@@ -66,7 +72,7 @@ class AdminNavbar extends React.Component {
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="..."
-                        src={require("assets/img/theme/team-4-800x800.jpg")}
+                        src={logo}
                       />
                     </span>
                     <Media className="ml-2 d-none d-lg-block">
@@ -106,7 +112,7 @@ class AdminNavbar extends React.Component {
             </Nav>
           </Container>
         </Navbar>
-      </>
+
     );
   }
 }

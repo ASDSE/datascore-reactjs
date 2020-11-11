@@ -1,23 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import './index.css';
-import App from './App';
-import About from './about'
-import Contact from './contact'
+/*!
 
-const routing = (
-  <Router>
-    <div>
-      <h1>React Router Example</h1>
-      <Route exact path="/" component={App} />
-      <Route exact path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
-    </div>
-  </Router>
-);
+=========================================================
+* Argon Dashboard React - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+import "assets/plugins/nucleo/css/nucleo.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "assets/css/argon-dashboard-react.css";
+
+import AdminLayout from "layouts/Admin.js";
+import Admin from "layouts/Admin.js";
+import AuthLayout from "layouts/Auth.js";
+import App from './App'
+import Index from 'views/Index'
+import AdminNavbar from "components/Navbars/AdminNavbar.js";
 
 ReactDOM.render(
-  routing,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Index} />
+
+      //<Route path="/" render={props => <AdminLayout {...props} />} />
+      //<Route path="/" render={props => <AuthLayout {...props} />} />
+      //<Redirect from="/" to="/admin/index" />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

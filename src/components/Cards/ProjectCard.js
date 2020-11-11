@@ -1,35 +1,43 @@
 import React from "react";
-
+import cardImage from "assets/img/theme/team-1-800x800.jpg"
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardImg,
+  CardTitle,
+  CardText
+} from "reactstrap";
 
+class ProjectCard extends React.Component {
+  render() {
+    return (
 
+        <Card style={{ width: "18rem" }}>
+          <CardImg
+            alt="..."
+            src={this.props.cardImage}
+            top
+          />
+          <CardBody>
+            <CardTitle>{this.props.title}</CardTitle>
+            <CardText>
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </CardText>
+            <Button
+              color="primary"
+              href={this.props.link}
+              target = "_blank"
+            >
+              Go somewhere
+            </Button>
+          </CardBody>
+        </Card>
+    
+    );
+  }
+}
 
-<Card className="card-stats mb-4 mb-xl-0">
-  <CardBody>
-    <Row>
-      <div className="col">
-        <CardTitle
-          tag="h5"
-          className="text-uppercase text-muted mb-0"
-        >
-          Traffic
-        </CardTitle>
-        <span className="h2 font-weight-bold mb-0">
-          350,897
-        </span>
-      </div>
-      <Col className="col-auto">
-        <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-          <i className="fas fa-chart-bar" />
-        </div>
-      </Col>
-    </Row>
-    <p className="mt-3 mb-0 text-muted text-sm">
-      <span className="text-success mr-2">
-        <i className="fa fa-arrow-up" /> 3.48%
-      </span>{" "}
-      <span className="text-nowrap">Since last month</span>
-    </p>
-  </CardBody>
-</Card>
+export default ProjectCard;

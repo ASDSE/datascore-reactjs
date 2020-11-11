@@ -47,6 +47,7 @@ import {
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
+import ProjectCards from "views/Projects.js";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 
 class Index extends React.Component {
@@ -71,6 +72,8 @@ class Index extends React.Component {
   render() {
     return (
       <>
+        <AdminNavbar />
+        <ProjectCards />
         <Header />
         {/* Page content */}
         <Container className="mt--7" fluid>

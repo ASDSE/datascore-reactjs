@@ -49,8 +49,8 @@ class AdminNavbar extends React.Component {
             <img
               alt="..."
               src={logo}
-              width='100'
-              height='100'
+              width='200'
+              height='200'
             />
             </Link>
             <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">

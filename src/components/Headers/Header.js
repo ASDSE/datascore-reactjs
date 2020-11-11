@@ -20,7 +20,10 @@ import React from "react";
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import StatsCard from "components/Cards/StatsCard.js";
+import ProjectCard from "components/Cards/ProjectCard.js";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
+
+import jupyterLogo from "assets/img/cards/jupyterhub-logo.png"
 
 class Header extends React.Component {
   render() {
@@ -30,8 +33,22 @@ class Header extends React.Component {
           <AdminNavbar/>
           <Container fluid>
             <div className="header-body">
+              {/* Card projects */}
+              <Row className="pt-3">
+                <Col></Col>
+                <Col >
+                  <ProjectCard title="Semantics" icon="fas fa-percent" iconbg="bg-info"/>
+                </Col>
+                <Col >
+                  <ProjectCard title="Schema" icon="fas fa-percent" iconbg="bg-info"/>
+                </Col>
+                <Col >
+                  <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo}/>
+                </Col>
+                <Col></Col>
+              </Row>
               {/* Card stats */}
-              <Row>
+              <Row className="pt-3">
                 <Col lg="6" xl="3">
                   <StatsCard title="Stats" icon="fas fa-chart-bar" iconbg="bg-danger"/>
                 </Col>
@@ -46,6 +63,7 @@ class Header extends React.Component {
                   <StatsCard title="Performance" icon="fas fa-percent" iconbg="bg-info"/>
                 </Col>
               </Row>
+
             </div>
           </Container>
         </div>

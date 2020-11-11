@@ -23,19 +23,18 @@ class ProjectCard extends React.Component {
           <CardBody>
             <CardTitle>{this.props.title}</CardTitle>
             <CardText>
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
+              {this.props.text}
             </CardText>
             <Button
               color="primary"
               href={this.props.link}
               target = "_blank"
             >
-              Go somewhere
+              {this.props.buttonTitle}
             </Button>
           </CardBody>
         </Card>
-    
+
     );
   }
 }

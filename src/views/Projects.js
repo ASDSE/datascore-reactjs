@@ -3,6 +3,7 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import StatsCard from "components/Cards/StatsCard.js";
 import ProjectCard from "components/Cards/ProjectCard.js";
 import jupyterLogo from "assets/img/cards/jupyterhub-logo.png"
+import dashboard from "assets/img/cards/dashboard.png"
 
 function ProjectCards() {
   return (
@@ -15,11 +16,11 @@ function ProjectCards() {
             <Row className="pt-3">
               <Col></Col>
               <Col >
-                <ProjectCard title="Dashboard" icon="fas fa-percent" iconbg="bg-info"/>
+                <ProjectCard title="Dashboard" cardImage = {dashboard} text="The DataScore dashboard showcases metrics for scientific dataset management."  buttonTitle="DataScore Dashboard" />
               </Col>
-              
+
               <Col >
-                <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo}/>
+                <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo} buttonTitle="JupyterHub" text="Scientometric analysis based on DataCites GraphQL API"/>
               </Col>
               <Col></Col>
             </Row>

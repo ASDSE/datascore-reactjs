@@ -100,11 +100,12 @@ class Navbars extends React.Component {
               </div>
               <Nav className="ml-lg-auto" navbar>
                 <NaviItem text="Home"/>
+                <NaviItem text="Projects"/>
                 <NaviItem text="Dashboard"/>
                 <NaviItem text="JupyterHub"/>
                 <NaviItem text="Team"/>
                 <NaviItem text="Contact"/>
-                
+
               </Nav>
             </UncontrolledCollapse>
           </Container>

@@ -3,6 +3,7 @@ import {Route, Link } from "react-router-dom";
 import logo from "assets/img/brand/DataScoreLogoWeb.png";
 
 
+
 // reactstrap components
 import {
   UncontrolledCollapse,
@@ -50,8 +51,8 @@ class Navbars extends React.Component {
             <img
               alt="..."
               src={logo}
-              width='100'
-              height='100'
+              width='120'
+              height='120'
             />
             </Link>
             <button
@@ -96,6 +97,7 @@ class Navbars extends React.Component {
               </div>
               <Nav className="ml-lg-auto" navbar>
                 <NaviItem text="Home" route="/" />
+                <NaviItem text="About" route="/about" />
                 <NaviItem text="Projects" route="/projects"/>
                 <NaviItem text="Dashboard" route="/dashboard" />
                 <NaviItem text="JupyterHub" route="/jupyterhub" />
@@ -103,6 +105,7 @@ class Navbars extends React.Component {
                 <NaviItem text="Contact" route="/contact" />
 
               </Nav>
+
             </UncontrolledCollapse>
           </Container>
         </Navbar>

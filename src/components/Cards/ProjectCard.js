@@ -16,6 +16,7 @@ class ProjectCard extends React.Component {
 
         <Card style={{ maxHeight: "30rem", maxWidth:this.props.maxWidth }}>
           <CardImg
+            className={this.props.imgClass}
             alt="..."
             src={this.props.cardImage}
             top
@@ -25,15 +26,18 @@ class ProjectCard extends React.Component {
               height: "auto",
               width: "auto",
               alignSelf: "center"
+
             }}
           />
-          <CardBody>
+        <CardBody className="flex-column d-flex">
             <CardTitle>{this.props.title}</CardTitle>
             <CardText>
               {this.props.text}
             </CardText>
+
             <Button
-              color="primary"
+              className="mt-auto"
+              color={this.props.buttonColor}
               href={this.props.link}
               target = "_blank"
             >

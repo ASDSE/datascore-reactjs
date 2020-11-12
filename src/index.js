@@ -11,6 +11,7 @@ import NavbarTop from './navbarTop'
 import Error404 from './error'
 import About from 'views/About'
 import Contact from 'views/Contact'
+import Disclaimer from 'views/Disclaimer'
 import Team from 'views/Team'
 import Dashboard from 'views/Dashboard'
 import ProjectCards from "views/Projects";
@@ -26,6 +27,7 @@ const routing = (
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/disclaimer" component={Disclaimer} />
             <Route exact path="/dashboard" component={Dashboard} />
 
             <Route exact path="/jupyterhub" component={() => {(window.location.href = "https://datascore-jupyterhub.int.kit.edu"); return null}} />

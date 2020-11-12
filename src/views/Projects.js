@@ -15,22 +15,22 @@ function ProjectCards() {
             {/* Card projects */}
             <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
-                <ProjectCard title="Dashboard" cardImage = {dashboard} text="The DataScore dashboard showcases metrics for scientific dataset management."  buttonTitle="DataScore Dashboard" maxWidth="40rem"/>
+                <ProjectCard title="Dashboard" cardImage = {dashboard} text="The DataScore dashboard showcases metrics for scientific dataset management."  buttonTitle="DataScore Dashboard" maxWidth="40rem" buttonColor="success" />
 
 
-              <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo} buttonTitle="JupyterHub" text="Scientometric analysis based on DataCites GraphQL API" maxWidth="40rem"/>
+              <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo} buttonTitle="JupyterHub" text="Scientometric analysis based on DataCites GraphQL API" maxWidth="40rem" buttonColor="success" />
 
               </CardDeck>
             </Row>
             <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
-                <ProjectCard title="Semantics" icon="fas fa-percent" iconbg="bg-info"  maxWidth="25rem"/>
-                <ProjectCard title="Schema" icon="fas fa-percent" iconbg="bg-info"   maxWidth="25rem"/>
-                <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo}  maxWidth="25rem"/>
+                <ProjectCard title="Semantic Web" text="Implementation of RDF Layers on a PostgreSQL database" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
+                <ProjectCard title="Data Aggregation" text="DataCite's Dataset Schema as showcase implementation including SUSHI based DatasetReports" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
+                <ProjectCard title="Education and Training" text="Recommendations and best practice guides for academia and repository operators." maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
               </CardDeck>
             </Row>
 
-            
+
           </div>
         </Container>
       </div>

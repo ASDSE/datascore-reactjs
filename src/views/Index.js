@@ -49,6 +49,7 @@ import {
 import Header from "components/Headers/Header.js";
 import ProjectCards from "views/Projects.js";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import Navbars from "components/Navbars/Navbars.js";
 
 class Index extends React.Component {
   constructor(props){
@@ -72,7 +73,7 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <AdminNavbar />
+        <Navbars />
         <ProjectCards />
         <Header />
         {/* Page content */}

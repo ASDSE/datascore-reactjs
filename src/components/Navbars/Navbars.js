@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Link } from "react-router-dom";
-import logo from "assets/img/brand/logo196.png";
+import logo from "assets/img/brand/DataScoreLogoWeb.png";
 
 
 // reactstrap components
@@ -97,7 +97,7 @@ class Navbars extends React.Component {
               <Nav className="ml-lg-auto" navbar>
                 <NaviItem text="Home" route="/" />
                 <NaviItem text="Projects" route="/projects"/>
-                <NaviItem text="Dashboard" route="/" />
+                <NaviItem text="Dashboard" route="/dashboard" />
                 <NaviItem text="JupyterHub" route="/jupyterhub" />
                 <NaviItem text="Team" route="/team" />
                 <NaviItem text="Contact" route="/contact" />

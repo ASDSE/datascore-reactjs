@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Route, Link } from "react-router-dom";
 import logo from "assets/img/brand/logo196.png";
+
+
 // reactstrap components
 import {
   UncontrolledCollapse,
@@ -21,15 +23,9 @@ import {
 function NaviItem(props) {
   return (
     <NavItem>
-      <NavLink
-        className="nav-link-icon"
-        href="/"
-        onClick={e => e.preventDefault()}
-      >
-
+      <Link className="nav-link-icon" to={props.route} >
         {props.text}
-
-      </NavLink>
+      </Link>
     </NavItem>
   );
 }
@@ -99,12 +95,12 @@ class Navbars extends React.Component {
                 </Row>
               </div>
               <Nav className="ml-lg-auto" navbar>
-                <NaviItem text="Home"/>
-                <NaviItem text="Projects"/>
-                <NaviItem text="Dashboard"/>
-                <NaviItem text="JupyterHub"/>
-                <NaviItem text="Team"/>
-                <NaviItem text="Contact"/>
+                <NaviItem text="Home" route="/" />
+                <NaviItem text="Projects" route="/projects"/>
+                <NaviItem text="Dashboard" route="/" />
+                <NaviItem text="JupyterHub" route="/jupyterhub" />
+                <NaviItem text="Team" route="/team" />
+                <NaviItem text="Contact" route="/contact" />
 
               </Nav>
             </UncontrolledCollapse>

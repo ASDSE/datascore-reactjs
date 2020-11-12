@@ -25,17 +25,18 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
+        <Container fluid>
         <Row className="align-items-center justify-content-xl-between">
           <Col xl="6">
             <div className="copyright text-center text-xl-left text-muted">
-              © 2018{" "}
+              © 2020{" "}
               <a
                 className="font-weight-bold ml-1"
-                href="https://www.creative-tim.com?ref=adr-admin-footer"
+                href="https://kit.edu"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Creative Tim
+                Karlsruhe Institute of Technology
               </a>
             </div>
           </Col>
@@ -84,6 +85,7 @@ class Footer extends React.Component {
             </Nav>
           </Col>
         </Row>
+        </Container>
       </footer>
     );
   }

@@ -14,11 +14,12 @@ class ProjectCard extends React.Component {
   render() {
     return (
 
-        <Card style={{ width: "18rem" }}>
+        <Card style={{ maxHeight: "30rem" }}>
           <CardImg
             alt="..."
             src={this.props.cardImage}
             top
+            style={{ maxWidth: "30rem" , alignSelf: "center"}}
           />
           <CardBody>
             <CardTitle>{this.props.title}</CardTitle>

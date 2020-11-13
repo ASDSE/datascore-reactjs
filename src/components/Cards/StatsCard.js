@@ -16,7 +16,7 @@ function StatsCard(props) {
               {props.title}
             </CardTitle>
             <span className="h2 font-weight-bold mb-0">
-              350,897
+              {props.fullName}
             </span>
           </div>
           <Col className="col-auto">
@@ -27,9 +27,9 @@ function StatsCard(props) {
         </Row>
         <p className="mt-3 mb-0 text-muted text-sm">
           <span className="text-success mr-2">
-            <i className="fa fa-arrow-up" /> 3.48%
+            <i className="fa fa-arrow-up" /> ORCID
           </span>{" "}
-          <span className="text-nowrap">Since last month</span>
+          <span className="text-nowrap">0000-0000-0000-0000</span>
         </p>
       </CardBody>
     </Card>

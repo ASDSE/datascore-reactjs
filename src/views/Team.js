@@ -21,8 +21,8 @@ function Team() {
 
             <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
-                <ProjectCard title="Dr. Stephan Sinn" buttonTitle="Institute of Nanotechnology" link="https://www.int.kit.edu/staff_4854.php#" maxWidth="20rem" cardImage={stephan} imgClass="black_white_img" buttonColor="primary" />
-                <ProjectCard title="Dr. Frank Biedermann" buttonTitle="Institute of Nanotechnology" link="https://www.int.kit.edu/staff_2034.php#" maxWidth="20rem"  cardImage={frank} imgClass="black_white_img" buttonColor="primary" />
+                <ProjectCard title="Dr. Stephan Sinn" buttonTitle="Institute INT" link="https://www.int.kit.edu/staff_4854.php#" maxWidth="20rem" cardImage={stephan} imgClass="black_white_img" buttonColor="primary" />
+                <ProjectCard title="Dr. Frank Biedermann" buttonTitle="Institute INT" link="https://www.int.kit.edu/staff_2034.php#" maxWidth="20rem"  cardImage={frank} imgClass="black_white_img" buttonColor="primary" />
                 <ProjectCard title="Dr. Tobias Käfer" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Tobias_K%C3%A4fer/en" maxWidth="20rem" cardImage={tobias} imgClass="black_white_img" buttonColor="primary" />
                 <ProjectCard title="Dr. Michael Färber" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Michael_F%C3%A4rber" maxWidth="20rem"  cardImage={michael} imgClass="black_white_img" buttonColor="primary" />
               </CardDeck>

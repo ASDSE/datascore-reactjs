@@ -44,13 +44,13 @@ class Footer extends React.Component {
 
           <Col xl="6">
             <Nav className="nav-footer justify-content-center justify-content-xl-end">
-              <NavItem  className="pl-2">
+              <NavItem  className="pl-2 pt-1">
                 <Link to="/disclaimer" >
                   Disclaimer
                 </Link>
               </NavItem>
 
-              <NavItem className="pl-2">
+              <NavItem className="pl-2 pt-1">
                 <Link to="/about" >
                   About
                 </Link>
@@ -67,7 +67,7 @@ class Footer extends React.Component {
 
             </Nav>
           </Col>
-          
+
         </Row>
         </Container>
       </footer>

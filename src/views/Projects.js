@@ -15,10 +15,10 @@ function ProjectCards() {
             {/* Card projects */}
             <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
-                <ProjectCard title="Dashboard" cardImage = {dashboard} text="The DataScore dashboard showcases metrics for scientific dataset management."  buttonTitle="DataScore Dashboard" maxWidth="40rem" buttonColor="success" />
+                <ProjectCard title="Dashboard" link="/dashboard" cardImage = {dashboard} text="The DataScore dashboard showcases metrics for scientific dataset management."  buttonTitle="DataScore Dashboard" maxWidth="40rem" buttonColor="success" />
 
 
-              <ProjectCard title="Collaborative Scientometry" link="https://datascore-jupyterhub.int.kit.edu" cardImage = {jupyterLogo} buttonTitle="JupyterHub" text="Scientometric analysis based on DataCites GraphQL API" maxWidth="40rem" buttonColor="success" />
+              <ProjectCard title="Collaborative Scientometry" link="/jupyterhub" cardImage = {jupyterLogo} buttonTitle="JupyterHub" text="Scientometric analysis based on DataCites GraphQL API" maxWidth="40rem" buttonColor="success" />
 
               </CardDeck>
             </Row>

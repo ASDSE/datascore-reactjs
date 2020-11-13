@@ -9,7 +9,7 @@ import {
   CardTitle,
   CardText
 } from "reactstrap";
-
+import {Link} from 'react-router-dom';
 class ProjectCard extends React.Component {
   render() {
     return (
@@ -34,15 +34,15 @@ class ProjectCard extends React.Component {
             <CardText>
               {this.props.text}
             </CardText>
-
-            <Button
-              className="mt-auto"
-              color={this.props.buttonColor}
-              href={this.props.link}
-              target = "_blank"
-            >
-              {this.props.buttonTitle}
-            </Button>
+            <Link to={this.props.link}>
+              <Button
+                className="mt-auto"
+                color={this.props.buttonColor}
+                target = "_blank"
+              >
+                {this.props.buttonTitle}
+              </Button>
+            </Link>
           </CardBody>
         </Card>
 

@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <Container fluid>
         <Alert color="danger">
-          This is not yet the final version of the project website, everything is constantly changing! No content here is yet a valid expression of our opinion or scientific result.
+          This is not yet the final version of the project website, everything is constantly changing! No content here is yet a valid expression of our opinion or any scientific result.
         </Alert>
         <h1><i className="fas fa-chart-pie" />  Projects  </h1>
         <ProjectCards />

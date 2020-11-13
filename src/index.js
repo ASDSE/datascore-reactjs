@@ -30,7 +30,8 @@ const routing = (
             <Route exact path="/disclaimer" component={Disclaimer} />
             <Route exact path="/dashboard" component={Dashboard} />
 
-            <Route exact path="/jupyterhub" component={() => {(window.location.href = "https://datascore-jupyterhub.int.kit.edu"); return null}} />
+            <Route exact path="/jupyterhub" component={() => {(window.open("https://datascore-jupyterhub.int.kit.edu", "_blank")); return null}} />
+
             <Route component={Error404} />
 
           </Switch>

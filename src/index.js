@@ -81,7 +81,7 @@ client
       </p>
     </div>
     <div>
-      <p> data.person.datasets.nodes[0].id</p>
+      <p> {data.person.datasets.nodes[0].id}</p>
     </div>
     </div>
   );

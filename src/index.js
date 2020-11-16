@@ -1,47 +1,61 @@
+import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router, Switch , Redirect} from 'react-router-dom'
-import "assets/plugins/nucleo/css/nucleo.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "assets/css/argon-dashboard-react.css";
+import { render } from 'react-dom';
 
-//import './index.css';
-import App from './App';
-import NavbarTop from './navbarTop'
-import Error404 from './error'
-import About from 'views/About'
-import Contact from 'views/Contact'
-import Disclaimer from 'views/Disclaimer'
-import Team from 'views/Team'
-import Dashboard from 'views/Dashboard'
-import ProjectCards from "views/Projects";
-import JupyterHub from "views/JupyterHub";
-import Navbars from "components/Navbars/Navbars.js";
-import Footer from "components/Footers/MainFooter"
-const routing = (
+
+const client = new ApolloClient({
+  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  cache: new InMemoryCache()
+});
+
+
+  const EXCHANGE_RATES = gql`
+    query GetExchangeRates {
+      rates(currency: "USD") {
+        currency
+        rate
+      }
+    }
+  `;
+
+  function ExchangeRates() {
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  return data.rates.map(({ currency, rate }) => (
+    <div key={currency}>
+      <p>
+        {currency}: {rate}
+      </p>
+    </div>
+  ));
+}
+
+client
+  .query({
+    query: gql`
+      query GetRates {
+        rates(currency: "USD") {
+          currency
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
+
+
+  function App() {
+    return (
+      <ApolloProvider client={client}>
         <div>
-        <Router>
-          <Navbars />
-          <Switch>
-            <Route exact path="/" component={App} />
-            <Route exact path="/projects" component={ProjectCards} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/team" component={Team} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/disclaimer" component={Disclaimer} />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/jupyterhub" component={JupyterHub} />
+          <h2>My first Apollo app 🚀</h2>
+          <ExchangeRates/>
+        </div>
+      </ApolloProvider>
+    );
+  }
 
 
-            <Route component={Error404} />
-
-          </Switch>
-          <Footer/>
-        </Router>
-      </div>
-);
-
-ReactDOM.render(
-  routing,
-  document.getElementById('root')
-);
+  render(<App />, document.getElementById('root'));

@@ -22,19 +22,21 @@ class ProjectCard extends React.Component {
             top
             style={{
               maxHeight: "20rem" ,
-              maxWidth:this.props.maxWidth,
+              maxWidth: "inherit",
               height: "auto",
               width: "auto",
-              alignSelf: "center"
-
+              alignSelf: "center",
+              padding: "1.5rem"
             }}
           />
         <CardBody className="flex-column d-flex">
             <CardTitle>{this.props.title}</CardTitle>
-            <CardText>
+            <CardText style={{
+                textAlign: "justify",
+              }}>
               {this.props.text}
             </CardText>
-            <Link to={this.props.link}>
+            <Link to={this.props.link} className="mt-auto">
               <Button
                 className="mt-auto"
                 color={this.props.buttonColor}

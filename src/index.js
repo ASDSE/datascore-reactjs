@@ -15,6 +15,7 @@ import Disclaimer from 'views/Disclaimer'
 import Team from 'views/Team'
 import Dashboard from 'views/Dashboard'
 import ProjectCards from "views/Projects";
+import JupyterHub from "views/JupyterHub";
 import Navbars from "components/Navbars/Navbars.js";
 import Footer from "components/Footers/MainFooter"
 const routing = (
@@ -29,8 +30,8 @@ const routing = (
             <Route exact path="/about" component={About} />
             <Route exact path="/disclaimer" component={Disclaimer} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/jupyterhub" component={JupyterHub} />
 
-            <Route exact path="/jupyterhub" component={() => {(window.open("https://datascore-jupyterhub.int.kit.edu", "_blank")); return null}} />
 
             <Route component={Error404} />
 

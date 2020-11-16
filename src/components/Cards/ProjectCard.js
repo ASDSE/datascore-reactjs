@@ -10,6 +10,7 @@ import {
   CardText
 } from "reactstrap";
 import {Link} from 'react-router-dom';
+
 class ProjectCard extends React.Component {
   render() {
     return (
@@ -52,4 +53,49 @@ class ProjectCard extends React.Component {
   }
 }
 
+class TeamCard extends React.Component {
+  render() {
+    return (
+
+        <Card style={{ maxHeight: "30rem", maxWidth:this.props.maxWidth }}>
+          <CardImg
+            className={this.props.imgClass}
+            alt="..."
+            src={this.props.cardImage}
+            top
+            style={{
+              maxHeight: "20rem" ,
+              maxWidth: "inherit",
+              height: "auto",
+              width: "auto",
+              alignSelf: "center",
+              padding: "1.5rem"
+            }}
+          />
+        <CardBody className="flex-column d-flex">
+            <CardTitle>{this.props.title}</CardTitle>
+            <CardText style={{
+                textAlign: "justify",
+              }}>
+              {this.props.text}
+            </CardText>
+
+              <Button
+                className="mt-auto"
+                color={this.props.buttonColor}
+                href={this.props.link}
+                target = "_blank"
+
+              >
+                {this.props.buttonTitle}
+              </Button>
+
+          </CardBody>
+        </Card>
+
+    );
+  }
+}
+
+export {TeamCard};
 export default ProjectCard;

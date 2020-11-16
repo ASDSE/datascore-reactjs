@@ -4,16 +4,66 @@ import { render } from 'react-dom';
 
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  uri: 'https://api.datacite.org/graphql',
   cache: new InMemoryCache()
 });
 
+client
+  .query({
+    query: gql`
+      query GetRates {
+        person(id: "https://orcid.org/0000-0002-2906-2577") {
+          id
+          name
+          datasets {
+            nodes {
+              id
+              downloadCount
+              viewCount
+              citations {
+                totalCount
+              }
+            }
+          }
+          publications {
+            totalCount
+            nodes {
+              id
+              relatedIdentifiers {
+                relatedIdentifier
+              }
+            }
+          }
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
 
   const EXCHANGE_RATES = gql`
     query GetExchangeRates {
-      rates(currency: "USD") {
-        currency
-        rate
+      person(id: "https://orcid.org/0000-0002-2906-2577") {
+        id
+        name
+        datasets {
+          nodes {
+            id
+            downloadCount
+            viewCount
+            citations {
+              totalCount
+            }
+          }
+        }
+        publications {
+          totalCount
+          nodes {
+            id
+            relatedIdentifiers {
+              relatedIdentifier
+            }
+          }
+        }
       }
     }
   `;
@@ -23,27 +73,19 @@ const client = new ApolloClient({
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-
-  return data.rates.map(({ currency, rate }) => (
-    <div key={currency}>
+  return (
+    <div>
+    <div key={data.person.name}>
       <p>
-        {currency}: {rate}
+        {data.person.name}: {data.person.id}
       </p>
     </div>
-  ));
+    <div>
+      <p> data.person.datasets.nodes[0].id</p>
+    </div>
+    </div>
+  );
 }
-
-client
-  .query({
-    query: gql`
-      query GetRates {
-        rates(currency: "USD") {
-          currency
-        }
-      }
-    `
-  })
-  .then(result => console.log(result));
 
 
   function App() {

@@ -1,57 +1,52 @@
-import React from 'react';
-import ReactDOM, {render} from 'react-dom';
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import {ApolloProvider } from '@apollo/client';
+  import {client} from "components/GraphQL/GraphQLClient.js";
+  import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+  import "assets/plugins/nucleo/css/nucleo.css";
+  import "@fortawesome/fontawesome-free/css/all.min.css";
+  import "assets/css/argon-dashboard-react.css";
 
-import { gql, useMutation, ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+  //import './index.css';
+  import App from './App';
+  import Error404 from './error'
+  import About from 'views/About'
+  import Contact from 'views/Contact'
+  import Disclaimer from 'views/Disclaimer'
+  import Team from 'views/Team'
+  import Dashboard from 'views/Dashboard'
+  import ProjectCards from "views/Projects";
+  import JupyterHub from "views/JupyterHub";
+  import Navbars from "components/Navbars/Navbars.js";
+  import Footer from "components/Footers/MainFooter"
+  const routing = (
+          <div>
+            <ApolloProvider client={client}>
+              <Router>
+                <Navbars />
+                <Switch>
+                  <Route exact path="/" component={App} />
+                  <Route exact path="/projects" component={ProjectCards} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/team" component={Team} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/disclaimer" component={Disclaimer} />
+                  <Route exact path="/dashboard" component={Dashboard} />
+                  <Route exact path="/jupyterhub" component={JupyterHub} />
 
 
-const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
-  cache: new InMemoryCache()
-});
+                  <Route component={Error404} />
 
-const ADD_TODO = gql`
-  mutation AddTodo($type: String!) {
-    addTodo(type: $type) {
-      id
-      type
-    }
-  }
-`;
-
-function AddTodo() {
-  let input;
-  const [addTodo, { data }] = useMutation(ADD_TODO);
-
-  return (
-    <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          addTodo({ variables: { type: input.value } });
-          input.value = '';
-        }}
-      >
-        <input
-          ref={node => {
-            input = node;
-          }}
-        />
-        <button type="submit">Add Todo</button>
-      </form>
-    </div>
+                </Switch>
+                <Footer/>
+              </Router>
+            </ApolloProvider>
+          </div>
   );
-}
 
 
-function App() {
-  return (
-    <ApolloProvider client={client}>
-      <div>
-        <h2>My first Apollo app 🚀</h2>
-        <AddTodo/>
-      </div>
-    </ApolloProvider>
+
+  ReactDOM.render(
+    routing,
+    document.getElementById('root')
   );
-}
-
-render(<App />, document.getElementById('root'));

@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from "classnames";
+import {client, DCQuery} from "components/GraphQL/GraphQLClient.js";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 import InfoCards from 'views/dashboard/Info'
@@ -46,6 +47,7 @@ class Dashboard extends React.Component {
           </Col>
 
         </Row>
+        <DCQuery/>
       </Container>
     )
   }

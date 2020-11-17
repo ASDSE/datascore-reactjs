@@ -1,64 +1,52 @@
-import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
-import React from 'react';
-import { render } from 'react-dom';
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import {ApolloProvider } from '@apollo/client';
+  import {client} from "components/GraphQL/GraphQLClient.js";
+  import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+  import "assets/plugins/nucleo/css/nucleo.css";
+  import "@fortawesome/fontawesome-free/css/all.min.css";
+  import "assets/css/argon-dashboard-react.css";
+
+  //import './index.css';
+  import App from './App';
+  import Error404 from './error'
+  import About from 'views/About'
+  import Contact from 'views/Contact'
+  import Disclaimer from 'views/Disclaimer'
+  import Team from 'views/Team'
+  import Dashboard from 'views/Dashboard'
+  import ProjectCards from "views/Projects";
+  import JupyterHub from "views/JupyterHub";
+  import Navbars from "components/Navbars/Navbars.js";
+  import Footer from "components/Footers/MainFooter"
+  const routing = (
+          <div>
+            <ApolloProvider client={client}>
+              <Router>
+                <Navbars />
+                <Switch>
+                  <Route exact path="/" component={App} />
+                  <Route exact path="/projects" component={ProjectCards} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/team" component={Team} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/disclaimer" component={Disclaimer} />
+                  <Route exact path="/dashboard" component={Dashboard} />
+                  <Route exact path="/jupyterhub" component={JupyterHub} />
 
 
-const client = new ApolloClient({
-  uri: 'https://api.datacite.org/graphql',
-  cache: new InMemoryCache()
-});
+                  <Route component={Error404} />
 
-const EXCHANGE_RATES = gql`
-    query GetExchangeRates {
-      person(id: "https://orcid.org/0000-0002-2906-2577") {
-        id
-        name
-        datasets {
-          nodes {
-            id
-            downloadCount
-            viewCount
-            citations {
-              totalCount
-            }
-          }
-        }
-      }
-    }
-  `;
-
-  function ExchangeRates() {
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-  return (
-    <div>
-    <div key={data.person.name}>
-      <p>
-        {data.person.name}: {data.person.id}
-      </p>
-    </div>
-    <div>
-      {data.person.datasets.nodes.map(node => (
-        <p key={node.id}> {node.id}</p>
-      ))}
-    </div>
-    </div>
+                </Switch>
+                <Footer/>
+              </Router>
+            </ApolloProvider>
+          </div>
   );
-}
 
 
-  function App() {
-    return (
-      <ApolloProvider client={client}>
-        <div>
-          <h2>My first Apollo app 🚀</h2>
-          <ExchangeRates/>
-        </div>
-      </ApolloProvider>
-    );
-  }
 
-
-  render(<App />, document.getElementById('root'));
+  ReactDOM.render(
+    routing,
+    document.getElementById('root')
+  );

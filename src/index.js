@@ -8,39 +8,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client
-  .query({
-    query: gql`
-      query GetRates {
-        person(id: "https://orcid.org/0000-0002-2906-2577") {
-          id
-          name
-          datasets {
-            nodes {
-              id
-              downloadCount
-              viewCount
-              citations {
-                totalCount
-              }
-            }
-          }
-          publications {
-            totalCount
-            nodes {
-              id
-              relatedIdentifiers {
-                relatedIdentifier
-              }
-            }
-          }
-        }
-      }
-    `
-  })
-  .then(result => console.log(result));
-
-  const EXCHANGE_RATES = gql`
+const EXCHANGE_RATES = gql`
     query GetExchangeRates {
       person(id: "https://orcid.org/0000-0002-2906-2577") {
         id
@@ -52,15 +20,6 @@ client
             viewCount
             citations {
               totalCount
-            }
-          }
-        }
-        publications {
-          totalCount
-          nodes {
-            id
-            relatedIdentifiers {
-              relatedIdentifier
             }
           }
         }
@@ -81,7 +40,9 @@ client
       </p>
     </div>
     <div>
-      <p> {data.person.datasets.nodes[0].id}</p>
+      {data.person.datasets.nodes.map(node => (
+        <p key={node.id}> {node.id}</p>
+      ))}
     </div>
     </div>
   );

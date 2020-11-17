@@ -29,7 +29,7 @@ function StatsCard(props) {
           <span className="text-success mr-2">
             <i className="fa fa-arrow-up" /> ORCID
           </span>{" "}
-          <span className="text-nowrap">0000-0000-0000-0000</span>
+          <span className="text-nowrap">{props.orcid}</span>
         </p>
       </CardBody>
     </Card>

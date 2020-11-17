@@ -1,10 +1,8 @@
 import React from "react";
-import { Card, CardDeck, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import {Container, Row, Col } from "reactstrap";
 import StatsCard from "components/Cards/StatsCard.js";
-import jupyterLogo from "assets/img/cards/jupyterhub-logo.png"
-import dashboard from "assets/img/cards/dashboard.png"
 
-function InfoCards() {
+function InfoCards(props) {
   return (
     <>
       <div className="header pb-8 pt-5 pt-md-1">
@@ -16,7 +14,7 @@ function InfoCards() {
               <Col lg="0" xl="2">
               </Col>
               <Col lg="6" xl="4">
-              <StatsCard title="Scientist" icon="fas fa-users" iconbg="bg-yellow" fullName="Nicolas Deutscher" />
+                <StatsCard title="Scientist" icon="fas fa-users" iconbg="bg-yellow" fullName={props.Name} orcid={props.Orcid} />
               </Col>
               <Col lg="6" xl="4">
                 <StatsCard title="Total Numbers" icon="fas fa-chart-bar" iconbg="bg-danger" fullName="Datasets" />

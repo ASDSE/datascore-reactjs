@@ -9,7 +9,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-const EXCHANGE_RATES = gql`
+const DATA_CITE_QUERY = gql`
     query GetExchangeRates {
       person(id: "https://orcid.org/0000-0002-2906-2577") {
         id
@@ -29,7 +29,7 @@ const EXCHANGE_RATES = gql`
   `;
 
   function DCQuery() {
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  const { loading, error, data } = useQuery(DATA_CITE_QUERY);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -49,4 +49,4 @@ const EXCHANGE_RATES = gql`
   );
 }
 
-export {client, DCQuery};
+export {client, DCQuery, DATA_CITE_QUERY};

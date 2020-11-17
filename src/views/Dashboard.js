@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from "classnames";
-import {client, DCQuery} from "components/GraphQL/GraphQLClient.js";
+import {client, DCQuery, DATA_CITE_QUERY} from "components/GraphQL/GraphQLClient.js";
+import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 import InfoCards from 'views/dashboard/Info'
@@ -31,25 +32,39 @@ import {
   chartExample2
 } from "variables/charts.js";
 
-class Dashboard extends React.Component {
-  render() {
-    return (
+function Dashboard(props){
+  const { loading, error, data } = useQuery(DATA_CITE_QUERY);
+  if (loading) return (
+    <Container fluid>
+      <h1>Dashboard</h1>
+      <p>Loading...</p>
+    </Container>
+    );
+  if (error) return (
+    <Container fluid>
+      <h1>Dashboard</h1>
+      <p>Error...</p>
+    </Container>
+    );
+  return (
 
-      <Container fluid>
-        <h1>Dashboard</h1>
-        <InfoCards />
-        <Row>
-          <Col>
-            <BarChart />
-          </Col>
-          <Col>
-            <LineChart />
-          </Col>
+    <Container fluid>
+      <h1>Dashboard</h1>
+      <InfoCards Name={data.person.name} Orcid={data.person.id} />
+      <Row>
+        <Col>
+          <BarChart />
+        </Col>
+        <Col>
+          <LineChart />
+        </Col>
 
-        </Row>
-        <DCQuery/>
-      </Container>
-    )
-  }
+      </Row>
+      <DCQuery/>
+    </Container>
+  )
 }
+
+
+
 export default Dashboard

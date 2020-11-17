@@ -28,6 +28,25 @@ const DATA_CITE_QUERY = gql`
     }
   `;
 
+  const DATA_CITE_MUTATION = gql`
+      mutation GetExchangeRates {
+        person(id: "https://orcid.org/0000-0002-2906-2577") {
+          id
+          name
+          datasets {
+            nodes {
+              id
+              downloadCount
+              viewCount
+              citations {
+                totalCount
+              }
+            }
+          }
+        }
+      }
+    `;
+
   function DCQuery() {
   const { loading, error, data } = useQuery(DATA_CITE_QUERY);
 
@@ -49,4 +68,4 @@ const DATA_CITE_QUERY = gql`
   );
 }
 
-export {client, DCQuery, DATA_CITE_QUERY};
+export {client, DCQuery, DATA_CITE_QUERY, DATA_CITE_MUTATION};

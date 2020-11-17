@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from "classnames";
-import {client, DCQuery, DATA_CITE_QUERY} from "components/GraphQL/GraphQLClient.js";
-import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery, useLazyQuery } from '@apollo/client';
+import {client, DCQuery, DATA_CITE_QUERY, DATA_CITE_MUTATION} from "components/GraphQL/GraphQLClient.js";
+import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery, useLazyQuery, useMutation } from '@apollo/client';
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 import InfoCards from 'views/dashboard/Info'

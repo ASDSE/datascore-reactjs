@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from "classnames";
 import {client, DCQuery, DATA_CITE_QUERY} from "components/GraphQL/GraphQLClient.js";
-import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
+import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery, useLazyQuery } from '@apollo/client';
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 import InfoCards from 'views/dashboard/Info'
@@ -33,7 +33,7 @@ import {
 } from "variables/charts.js";
 
 function Dashboard(props){
-  const { loading, error, data } = useQuery(DATA_CITE_QUERY);
+  const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
   if (loading) return (
     <Container fluid>
       <h1>Dashboard</h1>
@@ -50,7 +50,11 @@ function Dashboard(props){
 
     <Container fluid>
       <h1>Dashboard</h1>
-      <InfoCards Name={data.person.name} Orcid={data.person.id} />
+      <Button onClick={() => getData()}>
+        Load Datasets
+      </Button>
+
+      <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} />
       <Row>
         <Col>
           <BarChart />
@@ -60,7 +64,7 @@ function Dashboard(props){
         </Col>
 
       </Row>
-      <DCQuery/>
+
     </Container>
   )
 }

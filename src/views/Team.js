@@ -4,10 +4,10 @@ import StatsCard from "components/Cards/StatsCard.js";
 import {TeamCard} from "components/Cards/ProjectCard.js";
 import jupyterLogo from "assets/img/cards/jupyterhub-logo.png"
 import dashboard from "assets/img/cards/dashboard.png"
-import stephan from "assets/img/cards/stephan_sinn.jpg"
-import frank from "assets/img/cards/frank_biedermann.jpg"
-import michael from "assets/img/cards/michael_faerber.png"
-import tobias from "assets/img/cards/tobias_kaefer.gif"
+import stephan from "assets/img/cards/stephan.png"
+import frank from "assets/img/cards/frank.png"
+import michael from "assets/img/cards/michael.png"
+import tobias from "assets/img/cards/tobias.png"
 
 
 function Team() {

@@ -21,7 +21,7 @@ import {
   Table,
   Container,
   Row,
-  Col, Input
+  Col, Input, FormGroup
 } from "reactstrap";
 
 // core components
@@ -34,105 +34,37 @@ import {
 
 
 
-export function NameForm(props) {
-  const [name, setName] = useState("");
-  const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
-  const handleSubmit = (evt) => {
-      evt.preventDefault();
-      getData();
-      alert(`Submitting Name ${name}`)
-  }
-  return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Frirst Name:
-        <input
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
-  );
-}
 
-const GET_DOGGO = gql`
-  query Dog ($breed: String!) {
-    dog(breed: $breed) {
-      id
-      displayImage
-    }
-  }
-`
-
-
-const BreeForm = () => {
-  const [breed, setBreed] = useState('dingo')
-  const [getDog, {loading, data}] = useLazyQuery(GET_DOGGO);
-
-  if (loading) {
-    return <h2> Loading </h2>;
-  }
-
-  return (
-    <>
-      {data && data.dog ? (
-        <img
-          alt="Cute Dog"
-          src={data.dog.displayImage}
-          style={{height: 500, width: 500}}
-        />
-      ) : null}
-      <Input
-        type="text"
-        onChange={event => setBreed(event.target.value)}
-        placeholder="Choose a dog"
-        />
-      <Button
-        onClick={() =>
-          getDog({
-            variables: {breed}
-          })
-        }
-      >
-      Get a Dog</Button>
-    </>
-  )
-}
 
 
 
 function Dashboard(props){
   let input;
-  const [orcid, setBreed] = useState("https://orcid.org/0000-0002-2906-2577")
+  const [orcid, setOrcid] = useState("https://orcid.org/0000-0002-2906-2577")
   const [getData, { loading, error, data, client }] = useLazyQuery(DATA_CITE_QUERY, { errorPolicy: 'all' });
-  if (loading) return (
-    <Container fluid>
-      <h1>Dashboard</h1>
-      <p>Loading...</p>
-    </Container>
-    );
-  if (error) return (
-    <Container fluid>
-      <h1>Dashboard</h1>
-      <p>{error.message}
 
-      </p>
 
-    </Container>
-    );
   return (
 
     <Container fluid>
       <h1>Dashboard</h1>
-      <Button onClick={() => getData({
-        variables: {orcid}
-      })
-      }>
-        Load Datasets
-      </Button>
-
+        {error && <p>{error.message}</p>}
+        {loading && <p>Loading...</p>}
+      <Col md="4">
+        <FormGroup>
+          <Input
+            type="text"
+            onChange={event => setOrcid(event.target.value)}
+            placeholder="Enter our ORCID URL e.g. https://orcid.org/0000-0002-2906-2577"
+            />
+          <Button onClick={() => getData({
+            variables: {orcid}
+          })
+          }>
+            Load Datasets
+          </Button>
+        </FormGroup>
+      </Col>
       <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} />
       <Row>
         <Col>

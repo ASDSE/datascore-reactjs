@@ -1,36 +1,36 @@
 {
   "files": {
     "main.css": "/static/css/main.9e579bae.chunk.css",
-    "main.js": "/static/js/main.abdfd8c2.chunk.js",
-    "main.js.map": "/static/js/main.abdfd8c2.chunk.js.map",
+    "main.js": "/static/js/main.eb85478d.chunk.js",
+    "main.js.map": "/static/js/main.eb85478d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.87298431.js",
     "runtime-main.js.map": "/static/js/runtime-main.87298431.js.map",
     "static/css/2.74143ea4.chunk.css": "/static/css/2.74143ea4.chunk.css",
-    "static/js/2.eb220eea.chunk.js": "/static/js/2.eb220eea.chunk.js",
-    "static/js/2.eb220eea.chunk.js.map": "/static/js/2.eb220eea.chunk.js.map",
+    "static/js/2.30117f01.chunk.js": "/static/js/2.30117f01.chunk.js",
+    "static/js/2.30117f01.chunk.js.map": "/static/js/2.30117f01.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.74143ea4.chunk.css.map": "/static/css/2.74143ea4.chunk.css.map",
     "static/css/main.9e579bae.chunk.css.map": "/static/css/main.9e579bae.chunk.css.map",
-    "static/js/2.eb220eea.chunk.js.LICENSE.txt": "/static/js/2.eb220eea.chunk.js.LICENSE.txt",
-    "static/js/main.abdfd8c2.chunk.js.LICENSE.txt": "/static/js/main.abdfd8c2.chunk.js.LICENSE.txt",
+    "static/js/2.30117f01.chunk.js.LICENSE.txt": "/static/js/2.30117f01.chunk.js.LICENSE.txt",
+    "static/js/main.eb85478d.chunk.js.LICENSE.txt": "/static/js/main.eb85478d.chunk.js.LICENSE.txt",
     "static/media/DataScoreLogoWeb.f51617fc.png": "/static/media/DataScoreLogoWeb.f51617fc.png",
     "static/media/LogoKIT.6d64b848.svg": "/static/media/LogoKIT.6d64b848.svg",
     "static/media/dashboard.78bc6e94.png": "/static/media/dashboard.78bc6e94.png",
     "static/media/all.min.css": "/static/media/fa-solid-900.afbdcbcc.woff",
-    "static/media/frank.25e34019.png": "/static/media/frank.25e34019.png",
+    "static/media/frank_biedermann.d393f22c.jpg": "/static/media/frank_biedermann.d393f22c.jpg",
     "static/media/jupyterhub-logo.fcb79533.png": "/static/media/jupyterhub-logo.fcb79533.png",
     "static/media/logo.103b5fa1.svg": "/static/media/logo.103b5fa1.svg",
-    "static/media/michael.22bf46d3.png": "/static/media/michael.22bf46d3.png",
+    "static/media/michael_faerber.869a16c6.png": "/static/media/michael_faerber.869a16c6.png",
     "static/media/nucleo.css": "/static/media/nucleo-icons.d6a66724.ttf",
-    "static/media/stephan.eeacbea2.png": "/static/media/stephan.eeacbea2.png",
+    "static/media/stephan_sinn.4cb6b1bd.jpg": "/static/media/stephan_sinn.4cb6b1bd.jpg",
     "static/media/team-1-800x800.fa5a7ac2.jpg": "/static/media/team-1-800x800.fa5a7ac2.jpg",
-    "static/media/tobias.71889429.png": "/static/media/tobias.71889429.png"
+    "static/media/tobias_kaefer.0957c1ed.gif": "/static/media/tobias_kaefer.0957c1ed.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.87298431.js",
     "static/css/2.74143ea4.chunk.css",
-    "static/js/2.eb220eea.chunk.js",
+    "static/js/2.30117f01.chunk.js",
     "static/css/main.9e579bae.chunk.css",
-    "static/js/main.abdfd8c2.chunk.js"
+    "static/js/main.eb85478d.chunk.js"
   ]
 }

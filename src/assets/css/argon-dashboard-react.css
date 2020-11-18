@@ -14374,3 +14374,7 @@ button:focus, :focus {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
+
+.cursor-pointer{
+  cursor: pointer;
+}

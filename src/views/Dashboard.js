@@ -20,7 +20,7 @@ import {
   Progress,
   Table,
   Container,
-  Row,
+  Row, Label,
   Col, Input, FormGroup
 } from "reactstrap";
 
@@ -55,7 +55,7 @@ function Dashboard(props){
           <Input
             type="text"
             onChange={event => setOrcid(event.target.value)}
-            placeholder="Enter our ORCID URL e.g. https://orcid.org/0000-0002-2906-2577"
+            placeholder="Enter your ORCID URL e.g. https://orcid.org/0000-0002-2906-2577"
             />
           <Button onClick={() => getData({
             variables: {orcid}
@@ -63,6 +63,7 @@ function Dashboard(props){
           }>
             Load Datasets
           </Button>
+          <p>Missing input will load a representative example.</p>
         </FormGroup>
       </Col>
       <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>

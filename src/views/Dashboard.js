@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classnames from "classnames";
-import {client, DCQuery, DATA_CITE_QUERY, DATA_CITE_MUTATION} from "components/GraphQL/GraphQLClient.js";
+import {client, DCQuery, DATA_CITE_QUERY} from "components/GraphQL/GraphQLClient.js";
 import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery, useLazyQuery, useMutation } from '@apollo/client';
 // javascipt plugin for creating charts
 import Chart from "chart.js";
@@ -105,6 +105,7 @@ const BreeForm = () => {
 
 function Dashboard(props){
   let input;
+  const [orcid, setBreed] = useState("https://orcid.org/0000-0002-2906-2577")
   const [getData, { loading, error, data, client }] = useLazyQuery(DATA_CITE_QUERY, { errorPolicy: 'all' });
   if (loading) return (
     <Container fluid>
@@ -126,7 +127,7 @@ function Dashboard(props){
     <Container fluid>
       <h1>Dashboard</h1>
       <Button onClick={() => getData({
-        variables: {orcid: "https://orcid.org/0000-0002-2906-2577"}
+        variables: {orcid}
       })
       }>
         Load Datasets

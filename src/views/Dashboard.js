@@ -21,7 +21,7 @@ import {
   Table,
   Container,
   Row,
-  Col
+  Col, Input
 } from "reactstrap";
 
 // core components
@@ -57,53 +57,55 @@ export function NameForm(props) {
   );
 }
 
+const GET_DOGGO = gql`
+  query Dog ($breed: String!) {
+    dog(breed: $breed) {
+      id
+      displayImage
+    }
+  }
+`
 
-const FooBarForm = () => {
-  const [formData, updateFormData] = React.useState(initialFormData);
-  const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
-  const handleChange = (e) => {
-    updateFormData({
-      ...formData,
 
-      // Trimming any whitespace
-      [e.target.name]: e.target.value.trim()
-    });
-  };
+const BreeForm = () => {
+  const [breed, setBreed] = useState('dingo')
+  const [getDog, {loading, data}] = useLazyQuery(GET_DOGGO);
 
-  const handleSubmit = () => {
-    //e.preventDefault()
-    console.log(formData);
-    getData();
-    // ... submit to API or something
-  };
+  if (loading) {
+    return <h2> Loading </h2>;
+  }
 
   return (
     <>
-      <label>
-        Username
-        <input name="username" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Password
-        <input name="password" onChange={handleChange} />
-      </label>
-      <br />
-      <Button onClick={handleSubmit}>Submit</Button>
+      {data && data.dog ? (
+        <img
+          alt="Cute Dog"
+          src={data.dog.displayImage}
+          style={{height: 500, width: 500}}
+        />
+      ) : null}
+      <Input
+        type="text"
+        onChange={event => setBreed(event.target.value)}
+        placeholder="Choose a dog"
+        />
+      <Button
+        onClick={() =>
+          getDog({
+            variables: {breed}
+          })
+        }
+      >
+      Get a Dog</Button>
     </>
-  );
-};
+  )
+}
 
-
-const initialFormData = Object.freeze({
-  username: "",
-  password: ""
-});
 
 
 function Dashboard(props){
   let input;
-  const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
+  const [getData, { loading, error, data, client }] = useLazyQuery(DATA_CITE_QUERY, { errorPolicy: 'all' });
   if (loading) return (
     <Container fluid>
       <h1>Dashboard</h1>
@@ -113,16 +115,20 @@ function Dashboard(props){
   if (error) return (
     <Container fluid>
       <h1>Dashboard</h1>
-      <p>Error...</p>
+      <p>{error.message}
+
+      </p>
+
     </Container>
     );
   return (
 
     <Container fluid>
       <h1>Dashboard</h1>
-      <FooBarForm/>
-      <NameForm/>
-      <Button onClick={() => getData()}>
+      <Button onClick={() => getData({
+        variables: {orcid: "https://orcid.org/0000-0002-2906-2577"}
+      })
+      }>
         Load Datasets
       </Button>
 

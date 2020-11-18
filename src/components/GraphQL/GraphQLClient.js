@@ -1,6 +1,7 @@
-import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
+import { ApolloClient,ApolloProvider, InMemoryCache, gql, useQuery, HttpLink, onError, ApolloLink   } from '@apollo/client';
 import React from 'react';
 import { render } from 'react-dom';
+
 
 
 
@@ -9,22 +10,59 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
+
+
+const GET_DOGGO = gql`
+  query Dog ($breed: String!) {
+    dog(breed: $breed) {
+      id
+      displayImage
+    }
+  }
+`
+
+
+
 const DATA_CITE_QUERY = gql`
-    query GetExchangeRates {
-      person(id: "https://orcid.org/0000-0002-2906-2577") {
-        id
-        name
-        datasets {
-          nodes {
-            id
-            downloadCount
-            viewCount
-            citations {
-              totalCount
+    query person($orcid: ID!) {
+        person(id: $orcid) {
+          id
+          name
+          datasets {
+            nodes {
+              id
+              downloadCount
+              viewCount
+              citations {
+                totalCount
+              }
             }
           }
         }
-      }
+
+
+    }
+  `;
+
+
+const DATA_CITE_QUERYs = gql`
+    query person {
+        person(id: "https://orcid.org/0000-0002-2906-2577") {
+          id
+          name
+          datasets {
+            nodes {
+              id
+              downloadCount
+              viewCount
+              citations {
+                totalCount
+              }
+            }
+          }
+        }
+
+
     }
   `;
 

@@ -65,7 +65,7 @@ function Dashboard(props){
           </Button>
         </FormGroup>
       </Col>
-      <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} />
+      <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
       <Row>
         <Col>
           <BarChart />

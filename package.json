@@ -48,9 +48,11 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@apollo/client": "^3.2.5",
     "@fortawesome/fontawesome-free": "5.12.1",
     "chart.js": "2.9.3",
     "classnames": "2.2.6",
+    "graphql": "^15.4.0",
     "moment": "2.24.0",
     "node-sass": "4.13.1",
     "nouislider": "14.1.1",

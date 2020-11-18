@@ -4,4 +4,6 @@ class AdvisoryBoard extends React.Component {
     return <h1>AdvisoryBoard</h1>
   }
 }
-export default AdvisoryBoard  
+
+
+export default AdvisoryBoard

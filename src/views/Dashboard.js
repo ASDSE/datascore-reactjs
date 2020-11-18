@@ -58,11 +58,52 @@ export function NameForm(props) {
 }
 
 
+const FooBarForm = () => {
+  const [formData, updateFormData] = React.useState(initialFormData);
+  const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
+  const handleChange = (e) => {
+    updateFormData({
+      ...formData,
+
+      // Trimming any whitespace
+      [e.target.name]: e.target.value.trim()
+    });
+  };
+
+  const handleSubmit = () => {
+    //e.preventDefault()
+    console.log(formData);
+    getData();
+    // ... submit to API or something
+  };
+
+  return (
+    <>
+      <label>
+        Username
+        <input name="username" onChange={handleChange} />
+      </label>
+      <br />
+      <label>
+        Password
+        <input name="password" onChange={handleChange} />
+      </label>
+      <br />
+      <Button onClick={handleSubmit}>Submit</Button>
+    </>
+  );
+};
+
+
+const initialFormData = Object.freeze({
+  username: "",
+  password: ""
+});
+
 
 function Dashboard(props){
   let input;
   const [getData, { loading, error, data }] = useLazyQuery(DATA_CITE_QUERY);
-  const [getMutation, { mutdata }] = useMutation(DATA_CITE_MUTATION);
   if (loading) return (
     <Container fluid>
       <h1>Dashboard</h1>
@@ -79,26 +120,12 @@ function Dashboard(props){
 
     <Container fluid>
       <h1>Dashboard</h1>
+      <FooBarForm/>
       <NameForm/>
       <Button onClick={() => getData()}>
         Load Datasets
       </Button>
-      <div>
-        <form
-          onSubmit={e => {
-            e.preventDefault();
-            getMutation({ variables: { type: input.value } });
-            input.value = '';
-          }}
-        >
-          <input
-            ref={node => {
-              input = node;
-            }}
-          />
-          <button type="submit">Add Todo</button>
-        </form>
-      </div>
+
       <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} />
       <Row>
         <Col>

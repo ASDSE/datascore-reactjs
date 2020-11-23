@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fc1a4382.chunk.css",
-    "main.js": "/static/js/main.1e49eee6.chunk.js",
-    "main.js.map": "/static/js/main.1e49eee6.chunk.js.map",
+    "main.js": "/static/js/main.339ab7e0.chunk.js",
+    "main.js.map": "/static/js/main.339ab7e0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.87298431.js",
     "runtime-main.js.map": "/static/js/runtime-main.87298431.js.map",
     "static/css/2.74143ea4.chunk.css": "/static/css/2.74143ea4.chunk.css",
@@ -12,18 +12,23 @@
     "static/css/2.74143ea4.chunk.css.map": "/static/css/2.74143ea4.chunk.css.map",
     "static/css/main.fc1a4382.chunk.css.map": "/static/css/main.fc1a4382.chunk.css.map",
     "static/js/2.928b71af.chunk.js.LICENSE.txt": "/static/js/2.928b71af.chunk.js.LICENSE.txt",
-    "static/js/main.1e49eee6.chunk.js.LICENSE.txt": "/static/js/main.1e49eee6.chunk.js.LICENSE.txt",
-    "static/media/DataScoreLogoWeb.f51617fc.png": "/static/media/DataScoreLogoWeb.f51617fc.png",
+    "static/js/main.339ab7e0.chunk.js.LICENSE.txt": "/static/js/main.339ab7e0.chunk.js.LICENSE.txt",
+    "static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png": "/static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png",
     "static/media/LogoKIT.6d64b848.svg": "/static/media/LogoKIT.6d64b848.svg",
     "static/media/axel_loewe.8af4fa3c.jpg": "/static/media/axel_loewe.8af4fa3c.jpg",
     "static/media/dashboard.78bc6e94.png": "/static/media/dashboard.78bc6e94.png",
+    "static/media/dashboard_16x9.ea412c63.png": "/static/media/dashboard_16x9.ea412c63.png",
+    "static/media/datacite_4x3.d8543b54.png": "/static/media/datacite_4x3.d8543b54.png",
+    "static/media/edu-1_4x3.33c4ba46.png": "/static/media/edu-1_4x3.33c4ba46.png",
     "static/media/all.min.css": "/static/media/fa-solid-900.afbdcbcc.woff",
     "static/media/frank.25e34019.png": "/static/media/frank.25e34019.png",
+    "static/media/jupyter.9882b1f8.png": "/static/media/jupyter.9882b1f8.png",
     "static/media/jupyterhub-logo.fcb79533.png": "/static/media/jupyterhub-logo.fcb79533.png",
     "static/media/logo.103b5fa1.svg": "/static/media/logo.103b5fa1.svg",
     "static/media/manuael.75ccd5a6.jpeg": "/static/media/manuael.75ccd5a6.jpeg",
     "static/media/michael.22bf46d3.png": "/static/media/michael.22bf46d3.png",
     "static/media/nucleo.css": "/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/semantic_4x3.2fde47bc.png": "/static/media/semantic_4x3.2fde47bc.png",
     "static/media/stephan.eeacbea2.png": "/static/media/stephan.eeacbea2.png",
     "static/media/team-1-800x800.fa5a7ac2.jpg": "/static/media/team-1-800x800.fa5a7ac2.jpg",
     "static/media/tobias.71889429.png": "/static/media/tobias.71889429.png"
@@ -33,6 +38,6 @@
     "static/css/2.74143ea4.chunk.css",
     "static/js/2.928b71af.chunk.js",
     "static/css/main.fc1a4382.chunk.css",
-    "static/js/main.1e49eee6.chunk.js"
+    "static/js/main.339ab7e0.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Link } from "react-router-dom";
-import logo from "assets/img/brand/DataScoreLogoWeb.png";
+import logo from "assets/img/brand/DataScore-Logo-Web-WhiteText.png";
 
 
 

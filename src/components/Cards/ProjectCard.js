@@ -7,7 +7,8 @@ import {
   CardBody,
   CardImg,
   CardTitle,
-  CardText
+  CardText,
+  CardFooter
 } from "reactstrap";
 import {Link} from 'react-router-dom';
 
@@ -15,7 +16,7 @@ class ProjectCard extends React.Component {
   render() {
     return (
 
-        <Card style={{ maxHeight: "30rem", maxWidth:this.props.maxWidth }}>
+        <Card style={{  maxWidth:this.props.maxWidth }}>
           <CardImg
             className={this.props.imgClass}
             alt="..."
@@ -23,7 +24,7 @@ class ProjectCard extends React.Component {
             top
             style={{
               maxHeight: "20rem" ,
-              maxWidth: "inherit",
+              maxWidth: "100%",
               height: "auto",
               width: "auto",
               alignSelf: "center",
@@ -57,7 +58,7 @@ class TeamCard extends React.Component {
   render() {
     return (
 
-        <Card style={{ maxHeight: "30rem", maxWidth:this.props.maxWidth }}>
+        <Card style={{ maxWidth:this.props.maxWidth }}>
           <CardImg
             className={this.props.imgClass}
             alt="..."
@@ -65,7 +66,7 @@ class TeamCard extends React.Component {
             top
             style={{
               maxHeight: "20rem" ,
-              maxWidth: "inherit",
+              maxWidth: "100%",
               height: "auto",
               width: "auto",
               alignSelf: "center",

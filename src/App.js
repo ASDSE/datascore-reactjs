@@ -17,7 +17,7 @@ class App extends React.Component {
         <ProjectCards />
         <h1><i className="fas fa-users" />  Team </h1>
         <Team />
-        <h1> <i className="fas fa-globe" />  Advisory Board</h1>
+        <h1> <i className="fas fa-globe" />  Supporters</h1>
         <AdvisoryBoard />
       </Container>
     )

@@ -8,6 +8,8 @@ import stephan from "assets/img/cards/stephan.png"
 import frank from "assets/img/cards/frank.png"
 import michael from "assets/img/cards/michael.png"
 import tobias from "assets/img/cards/tobias.png"
+import axel from "assets/img/cards/axel_loewe.jpg"
+import manuel from "assets/img/cards/manuael.jpeg"
 
 
 function Team() {
@@ -24,7 +26,11 @@ function Team() {
                 <TeamCard title="Dr. Stephan Sinn" buttonTitle="Institute INT" link="https://www.int.kit.edu/staff_4854.php#" maxWidth="20rem" cardImage={stephan} imgClass="black_white_img" buttonColor="primary" />
                 <TeamCard title="Dr. Frank Biedermann" buttonTitle="Institute INT" link="https://www.int.kit.edu/staff_2034.php#" maxWidth="20rem"  cardImage={frank} imgClass="black_white_img" buttonColor="primary" />
                 <TeamCard title="Dr. Tobias Käfer" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Tobias_K%C3%A4fer/en" maxWidth="20rem" cardImage={tobias} imgClass="black_white_img" buttonColor="primary" />
+              </CardDeck>
+              <CardDeck className="col-10 justify-content-md-center">
                 <TeamCard title="Dr. Michael Färber" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Michael_F%C3%A4rber" maxWidth="20rem"  cardImage={michael} imgClass="black_white_img" buttonColor="primary" />
+                <TeamCard title="Dr.-Ing. Axel Loewe" buttonTitle="Institute IBT" link="https://www.ibt.kit.edu/loewe.php" maxWidth="20rem"  cardImage={axel} imgClass="black_white_img" buttonColor="primary" />
+                <TeamCard title="Dr. Manuel Tsotsalas " buttonTitle="Institute IFG" link="https://www.ifg.kit.edu/english/21_1420.php" maxWidth="20rem"  cardImage={manuel} imgClass="black_white_img" buttonColor="primary" />
               </CardDeck>
             </Row>
 

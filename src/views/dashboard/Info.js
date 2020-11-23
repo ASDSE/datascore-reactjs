@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, Row, Col } from "reactstrap";
-import StatsCard, {PersonCard, DatasetCard} from "components/Cards/StatsCard.js";
+import StatsCard, {PersonCard, DatasetCard, SumCard} from "components/Cards/StatsCard.js";
 
 function InfoCards(props) {
   return (
@@ -17,12 +17,15 @@ function InfoCards(props) {
                 <PersonCard title="Scientist" fullName={props.Name} orcid={props.Orcid} />
               </Col>
               <Col lg="6" xl="4">
-                <DatasetCard title="Total Numbers" fullName="Datasets" datasets={props.Datasets}/>
+
+                <SumCard title="Total Numbers" fullName="Datasets" datasets={props.Datasets}/>
               </Col>
               </Row>
 
               <Row className="pt-3">
-
+                <Col>
+                    <DatasetCard title="Summary" fullName="Datasets" datasets={props.Datasets}/>
+                </Col>
               </Row>
 
 

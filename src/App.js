@@ -13,11 +13,8 @@ class App extends React.Component {
         <Alert color="danger">
           This is not yet the final version of the project website, everything is constantly changing! No content here is yet a valid expression of our opinion or any scientific result.
         </Alert>
-        <h1><i className="fas fa-chart-pie" />  Projects  </h1>
         <ProjectCards />
-        <h1><i className="fas fa-users" />  Team </h1>
         <Team />
-        <h1> <i className="fas fa-globe" />  Supporters</h1>
         <AdvisoryBoard />
       </Container>
     )

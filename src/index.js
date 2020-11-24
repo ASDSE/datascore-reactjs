@@ -17,6 +17,9 @@
   import Dashboard from 'views/Dashboard'
   import ProjectCards from "views/Projects";
   import JupyterHub from "views/JupyterHub";
+  import Education from "views/projects/Education";
+  import Schema from "views/projects/Schema";
+  import SemanticWeb from "views/projects/SemanticWeb";
   import Navbars from "components/Navbars/Navbars.js";
   import Footer from "components/Footers/MainFooter"
 
@@ -38,6 +41,9 @@
                   <Route exact path="/disclaimer" component={Disclaimer} />
                   <Route exact path="/dashboard" component={Dashboard} />
                   <Route exact path="/jupyterhub" component={JupyterHub} />
+                  <Route exact path="/education" component={Education} />
+                  <Route exact path="/semantic" component={SemanticWeb} />
+                  <Route exact path="/schema" component={Schema} />
 
 
                   <Route component={Error404} />

@@ -4,7 +4,7 @@ class Contact extends React.Component {
   render() {
     return (
       <Container fluid>
-        <h1>Contact</h1>
+        <h1><i className="far fa-envelope"/> Contact</h1>
         <p>
           We are very happy for any contribution to the DataScore project.
         </p>

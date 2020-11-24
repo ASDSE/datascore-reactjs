@@ -4,7 +4,7 @@ class About extends React.Component {
   render() {
     return (
       <Container fluid>
-        <h1>DataScore Project Description</h1>
+        <h1> <i className="fas fa-project-diagram" /> DataScore Project Description</h1>
           <p>
             The DataScore as a project of the <a className="font-weight-bold" href="https://www.forschungsdaten.info/praxis-kompakt/english-pages/glossary/#c403896" target="_blank">Research Data Management (RDM)</a> engagement pursues the realizations of the <a className="font-weight-bold" href="https://sfdora.org/" target="_blank">San Francisco Declaration of Research Assessment</a> (DORA).
           </p>

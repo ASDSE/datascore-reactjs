@@ -16,8 +16,8 @@ function Team() {
   return (
     <>
       <div className="header pb-8 pt-5 pt-md-1">
-
         <Container fluid>
+          <h1><i className="fas fa-users" />  Team </h1>
           <div className="header-body">
             {/* Cards team */}
 

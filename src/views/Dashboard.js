@@ -47,25 +47,29 @@ function Dashboard(props){
   return (
 
     <Container fluid>
-      <h1>Dashboard</h1>
+      <h1><i className="fas fa-chart-line"></i> Dashboard</h1>
         {error && <p>{error.message}</p>}
         {loading && <p>Loading...</p>}
-      <Col md="4">
         <FormGroup>
-          <Input
-            type="text"
-            onChange={event => setOrcid(event.target.value)}
-            placeholder="Enter your ORCID URL e.g. https://orcid.org/0000-0002-2906-2577"
-            />
-          <Button onClick={() => getData({
-            variables: {orcid}
-          })
-          }>
-            Load Datasets
-          </Button>
-          <p>Missing input will load a representative example.</p>
+          <Row>
+            <Col md="9">
+              <Input
+                type="text"
+                onChange={event => setOrcid(event.target.value)}
+                placeholder="Enter your ORCID URL e.g. https://orcid.org/0000-0002-2906-2577"
+                />
+            </Col>
+            <Col md='3'>
+              <Button onClick={() => getData({
+                  variables: {orcid}
+                })
+              }>
+              Load Datasets
+            </Button>
+            </Col>
+          </Row>
+          <p>Missing input will load a representative example. For any question please contact<a href="mailto: stephan.sinn@kit.edu"> Dr. Stephan Sinn </a></p>
         </FormGroup>
-      </Col>
       <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
       <Row>
         <Col>

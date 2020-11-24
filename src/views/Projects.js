@@ -12,8 +12,8 @@ function ProjectCards() {
   return (
     <>
       <div className="header pb-8 pt-5 pt-md-1">
-
         <Container fluid>
+          <h1><i className="fas fa-chart-pie" />  Projects  </h1>
           <div className="header-body">
             {/* Card projects */}
             <Row className="pt-3 justify-content-md-center">
@@ -24,9 +24,9 @@ function ProjectCards() {
             </Row>
             <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
-                <ProjectCard title="Semantic Web" cardImage = {semantic} text="Implementation of RDF Layers on a PostgreSQL database" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
-                <ProjectCard title="Data Aggregation" cardImage = {aggregation} text="DataCite's Dataset Schema as showcase implementation including SUSHI based DatasetReports" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
-                <ProjectCard title="Education and Training" cardImage = {education} text="Recommendations and best practice guides for academia and repository operators." maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
+                <ProjectCard title="Semantic Web" link="/semantic" cardImage = {semantic} text="Implementation of RDF Layers on a PostgreSQL database" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
+                <ProjectCard title="Data Aggregation" link="/schema" cardImage = {aggregation} text="DataCite's Dataset Schema as showcase implementation including SUSHI based DatasetReports" maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
+                <ProjectCard title="Education and Training" link="/education" cardImage = {education} text="Recommendations and best practice guides for academia and repository operators." maxWidth="25rem" buttonTitle="Read More" buttonColor="info" />
               </CardDeck>
             </Row>
 

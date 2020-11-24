@@ -26,12 +26,12 @@ const GET_DOGGO = gql`
 const DATA_CITE_QUERY = gql`
     query person($orcid: ID!) {
         person(id: $orcid) {
-          id
-          name
+          id: id
+          name: name
           datasets {
             nodes {
-              id
-              downloadCount
+              id: id
+              downloadCount: downloadCount
               viewCount
               citations {
                 totalCount

@@ -22,11 +22,7 @@ function InfoCards(props) {
               </Col>
               </Row>
 
-              <Row className="pt-3">
-                <Col>
-                    <DatasetCard title="Summary" fullName="Datasets" datasets={props.Datasets}/>
-                </Col>
-              </Row>
+
 
 
 

@@ -9,6 +9,7 @@ import {BarChart, LineChart} from 'views/dashboard/Charts'
 // react plugin used to create charts
 import graphql2chartjs from 'graphql2chartjs'
 import { Line, Bar } from "react-chartjs-2";
+import StatsCard, {PersonCard, DatasetCard, SumCard} from "components/Cards/StatsCard.js";
 // reactstrap components
 import {
   Button,
@@ -38,11 +39,14 @@ let chartExample2 = {
       yAxes: [{
                ticks: {
                    beginAtZero: true
+
                },
                display: true,
                scaleLabel: {
                  display: true,
-                 labelString: 'Counts'
+                 labelString: 'Counts',
+                 fontStyle: 'bold',
+                 fontSize: 18
           }
            },
          ],
@@ -50,18 +54,22 @@ let chartExample2 = {
                 barPercentage: 1.0,
                 categoryPercentage: 0.5,
                 ticks: {
-                    beginAtZero: true,
+                    beginAtZero: false,
                     display: true,
                     mirror: true,
                     autoSkip: false,
                     maxRotation: 90,
-                    minRotation: 90
-                },
+                    minRotation: 90,
+                    fontStyle: 'normal',
+                    fontSize: 12
+                                  },
                 display: true,
                 labelPlacement: "inside",
                 scaleLabel: {
                   display: true,
-                  labelString: 'Datasets'
+                  labelString: 'Datasets',
+                  fontStyle: 'bold',
+                  fontSize: 18
            }
             },
           ]
@@ -70,7 +78,7 @@ let chartExample2 = {
       callbacks: {
         label: function(item, data) {
           var label = data.datasets[item.datasetIndex].label || " ";
-          var yLabel = item.yLabel;
+          var yLabel = Math.floor(item.yLabel);
           var content = " ";
           if (data.datasets.length > 1) {
             content += label;
@@ -82,25 +90,24 @@ let chartExample2 = {
     }
   },
   data: {
-    labels: ["July", "Augusr", "Sep", "Oct", "Nov", "Dec", "O", "O"],
-    popups: ["some","text","here"],
+    labels: [""],
     datasets: [
       {
         label: "Views",
-        data: [1],
+        data: [0],
         maxBarThickness: 20,
         backgroundColor: ['#2dce89']
 
       },
       {
         label: "Downloads",
-        data: [2],
+        data: [0],
         maxBarThickness: 20,
         backgroundColor: ['#fb6340']
       },
       {
         label: "Citations",
-        data: [2],
+        data: [0],
         maxBarThickness: 20,
         backgroundColor: ['#5e72e4']
       }
@@ -112,11 +119,12 @@ let chartExample2 = {
 function updateGraphData(data){
   let newData = Object.assign(chartExample2)
   newData.data.labels = data.person.datasets.nodes.map(node => (node.id))
-  newData.data.datasets[0].data = data.person.datasets.nodes.map(node => (node.viewCount))
+  newData.data.datasets[0].data = data.person.datasets.nodes.map(node =>
+    ((node.viewCount == 0) ? 0.2 : node.viewCount  ))
   newData.data.datasets[0].backgroundColor = data.person.datasets.nodes.map(node => '#2dce89')
-  newData.data.datasets[1].data = data.person.datasets.nodes.map(node => (node.downloadCount))
+  newData.data.datasets[1].data = data.person.datasets.nodes.map(node => ((node.downloadCount == 0) ? 0.2 : node.downloadCount  ))
   newData.data.datasets[1].backgroundColor = data.person.datasets.nodes.map(node => '#fb6340')
-  newData.data.datasets[2].data = data.person.datasets.nodes.map(node => (node.citations.totalCount))
+  newData.data.datasets[2].data = data.person.datasets.nodes.map(node => ((node.citations.totalCount == 0) ? 0.2 : node.citations.totalCount  ))
   newData.data.datasets[2].backgroundColor = data.person.datasets.nodes.map(node => '#5e72e4')
   return newData
 }
@@ -155,14 +163,17 @@ function Dashboard(props){
           </Row>
           <p>Missing input will load a representative example. For any question please contact<a href="mailto: stephan.sinn@kit.edu"> Dr. Stephan Sinn </a></p>
         </FormGroup>
-      <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
+        <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
       <Row>
         <Col>
           <Bar data={data ? updateGraphData(data).data : chartExample2.data} options={chartExample2.options}/>
         </Col>
-
       </Row>
-
+      <Row className="pt-3">
+        <Col>
+            <DatasetCard title="Summary" fullName="Datasets" datasets={data ? data.person.datasets.nodes: []}/>
+        </Col>
+      </Row>
     </Container>
   )
 }

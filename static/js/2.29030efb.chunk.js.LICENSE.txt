@@ -17,6 +17,15 @@ object-assign
  * Released under the MIT License
  */
 
+/*!
+ * inflection
+ * Copyright(c) 2011 Ben Lin <ben@dreamerslab.com>
+ * MIT Licensed
+ *
+ * @fileoverview
+ * A port of inflection-js to node.js module.
+ */
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 

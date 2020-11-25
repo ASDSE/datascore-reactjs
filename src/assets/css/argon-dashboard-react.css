@@ -14378,3 +14378,7 @@ button:focus, :focus {
 .cursor-pointer{
   cursor: pointer;
 }
+
+.barchart-dashboard {
+  height: 500px;
+}

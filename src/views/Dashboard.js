@@ -35,6 +35,8 @@ import {
 
 let chartExample2 = {
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       yAxes: [{
                ticks: {
@@ -165,7 +167,7 @@ function Dashboard(props){
         </FormGroup>
         <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
       <Row>
-        <Col>
+        <Col className="barchart-dashboard">
           <Bar data={data ? updateGraphData(data).data : chartExample2.data} options={chartExample2.options}/>
         </Col>
       </Row>

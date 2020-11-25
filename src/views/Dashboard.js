@@ -35,12 +35,18 @@ import {
 
 let chartExample2 = {
   options: {
+    hover: {mode: null},
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       yAxes: [{
                ticks: {
-                   beginAtZero: true
+                   beginAtZero: true,
+                   stepSize: 10,
+                   min: 0,
+                   major: {
+                     enabled: true
+                   }
 
                },
                display: true,
@@ -86,14 +92,24 @@ let chartExample2 = {
             content += label;
           }
           content = yLabel + " " + content;
+          if (data.datasets[item.datasetIndex].label == "") {
+            content = null
+          }
           return content;
         }
+
       }
     }
   },
   data: {
     labels: [""],
     datasets: [
+    {
+      label: "",
+      data: [0.99],
+      maxBarThickness: 20,
+      backgroundColor: ['#f8f9fe']
+    },
       {
         label: "Views",
         data: [0],
@@ -121,13 +137,13 @@ let chartExample2 = {
 function updateGraphData(data){
   let newData = Object.assign(chartExample2)
   newData.data.labels = data.person.datasets.nodes.map(node => (node.id))
-  newData.data.datasets[0].data = data.person.datasets.nodes.map(node =>
+  newData.data.datasets[1].data = data.person.datasets.nodes.map(node =>
     ((node.viewCount == 0) ? 0.2 : node.viewCount  ))
-  newData.data.datasets[0].backgroundColor = data.person.datasets.nodes.map(node => '#2dce89')
-  newData.data.datasets[1].data = data.person.datasets.nodes.map(node => ((node.downloadCount == 0) ? 0.2 : node.downloadCount  ))
-  newData.data.datasets[1].backgroundColor = data.person.datasets.nodes.map(node => '#fb6340')
-  newData.data.datasets[2].data = data.person.datasets.nodes.map(node => ((node.citations.totalCount == 0) ? 0.2 : node.citations.totalCount  ))
-  newData.data.datasets[2].backgroundColor = data.person.datasets.nodes.map(node => '#5e72e4')
+  newData.data.datasets[1].backgroundColor = data.person.datasets.nodes.map(node => '#2dce89')
+  newData.data.datasets[2].data = data.person.datasets.nodes.map(node => ((node.downloadCount == 0) ? 0.2 : node.downloadCount  ))
+  newData.data.datasets[2].backgroundColor = data.person.datasets.nodes.map(node => '#fb6340')
+  newData.data.datasets[3].data = data.person.datasets.nodes.map(node => ((node.citations.totalCount == 0) ? 0.2 : node.citations.totalCount  ))
+  newData.data.datasets[3].backgroundColor = data.person.datasets.nodes.map(node => '#5e72e4')
   return newData
 }
 

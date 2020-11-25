@@ -23,7 +23,7 @@ import {
   Table,
   Container,
   Row, Label,
-  Col, Input, FormGroup
+  Col, Input, FormGroup, Alert
 } from "reactstrap";
 
 // core components
@@ -178,15 +178,24 @@ function Dashboard(props){
               Load Datasets
             </Button>
             </Col>
+
           </Row>
           <p>Missing input will load a representative example. For any question please contact<a href="mailto: stephan.sinn@kit.edu"> Dr. Stephan Sinn </a></p>
         </FormGroup>
+        <Row>
+          <Col md="12">
+            <Alert color="notice">
+              <i className="fas fa-exclamation-circle"/> This dashboard is retrieving datasets information via DataCite's GraphQL API. Some metrics might not yet been reported to DataCite and thus presented results may vary from the actual repository.
+            </Alert>
+          </Col>
+        </Row>
         <InfoCards Name={data ? data.person.name :"Nobody"} Orcid={data ? data.person.id : "0000"} Datasets={data ? data.person.datasets.nodes: []}/>
-      <Row>
+        <Row>
         <Col className="barchart-dashboard">
           <Bar data={data ? updateGraphData(data).data : chartExample2.data} options={chartExample2.options}/>
         </Col>
       </Row>
+
       <Row className="pt-3">
         <Col>
             <DatasetCard title="Summary" fullName="Datasets" datasets={data ? data.person.datasets.nodes: []}/>

@@ -11,6 +11,32 @@ class Schema extends React.Component {
             In order to provide meaningful datasets on a database or repository appropriate meta data is needed and thus a decent schema is necessary.
             An implementation of DataCite's Schema is conducted as an example on the <a href="https://suprabank.org" target="_blank" rel="noreferrer" className="font-weight-bold">SupraBank</a> repository. This example is based on the Ruby on Rails framework and resulting guide will be presented here.
           </p>
+          <h3>PID implementation</h3>
+          <p>
+            The DataCite Schema relies on <a href="https://www.forschungsdaten.info/praxis-kompakt/english-pages/glossary/#c403897" target="_blank" rel="noreferrer" className="font-weight-bold">Persistent Identifiers</a> (PIDs) for accurate cross referencing. We identified three (current) major PIDs which need to be implemented into a repository:
+            <ol>
+              <li>DOI</li>
+                <ul>
+                  <li>The <a  href="https://www.forschungsdaten.info/praxis-kompakt/english-pages/glossary/#c460412" target="_blank" rel="noreferrer" className="font-weight-bold">Digital Object Identifier</a> enables the persistent idendification of ditial documents in general. </li>
+                  <li>In the virtue of the DataScore project the DOI is used to identify datasets, that are hosted by a repository.</li>
+                  <li>The implementation is the final step and allowing the registration of DOIs at DataCite including meaningful meta data</li>
+              </ul>
+              <li>ORCID</li>
+                <ul>
+                  <li>The <a  href="https://orcid.org/" target="_blank" rel="noreferrer" className="font-weight-bold"> Open Researcher and Contributor ID</a> enables the idendification of researchers and students. </li>
+                  <li>In the virtue of the DataScore project the ORCID is used to identify creators and contributors to the datasets.</li>
+                  <li>ORCID can be easily implemented by manually providing the ORCID id and url.</li>
+                  <li>On account of an enhanced user experience we recommend the use of the free public <a href="https://orcid.org/organizations/integrators/API" target="_blank" rel="noreferrer" className="font-weight-bold">ORCID API</a> for information retrieval. On account of the massive information to be retreived from ORCID we recommend a seperate request from the user.</li>
+                </ul>
+              <li>ROR</li>
+                <ul>
+                  <li>The <a  href="https://ror.org/" target="_blank" rel="noreferrer" className="font-weight-bold"> Research Organization Registry</a> enables the unique identification of every research organization in the world. </li>
+                  <li>In the virtue of the DataScore project the ROR is used to identify the affiliations of the creators and contributors.</li>
+                  <li>ROR can be easily implemented by manually providing the ROR id and url.</li>
+                  <li>On account of an enhanced user experience we recommend the use of the free public <a href="https://ror.org/resources/" target="_blank" rel="noreferrer" className="font-weight-bold">ROR API</a> for information retrieval. This API works extrememly fast allowing for a live implementation.</li>
+                </ul>
+            </ol>
+          </p>
           <p>
             For any questions please contact: <a href="mailto:stephan.sinn@kit.edu" >Dr. Stephan Sinn</a>
           </p>

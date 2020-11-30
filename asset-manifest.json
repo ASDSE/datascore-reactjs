@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ff846796.chunk.css",
-    "main.js": "/static/js/main.b7bde824.chunk.js",
-    "main.js.map": "/static/js/main.b7bde824.chunk.js.map",
+    "main.js": "/static/js/main.645671b1.chunk.js",
+    "main.js.map": "/static/js/main.645671b1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.87298431.js",
     "runtime-main.js.map": "/static/js/runtime-main.87298431.js.map",
     "static/css/2.74143ea4.chunk.css": "/static/css/2.74143ea4.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.74143ea4.chunk.css.map": "/static/css/2.74143ea4.chunk.css.map",
     "static/css/main.ff846796.chunk.css.map": "/static/css/main.ff846796.chunk.css.map",
     "static/js/2.ee027236.chunk.js.LICENSE.txt": "/static/js/2.ee027236.chunk.js.LICENSE.txt",
-    "static/js/main.b7bde824.chunk.js.LICENSE.txt": "/static/js/main.b7bde824.chunk.js.LICENSE.txt",
+    "static/js/main.645671b1.chunk.js.LICENSE.txt": "/static/js/main.645671b1.chunk.js.LICENSE.txt",
     "static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png": "/static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png",
     "static/media/LogoKIT.6d64b848.svg": "/static/media/LogoKIT.6d64b848.svg",
     "static/media/axel_loewe.8af4fa3c.jpg": "/static/media/axel_loewe.8af4fa3c.jpg",
@@ -21,7 +21,9 @@
     "static/media/datacite_4x3.d8543b54.png": "/static/media/datacite_4x3.d8543b54.png",
     "static/media/edu-1_4x3.33c4ba46.png": "/static/media/edu-1_4x3.33c4ba46.png",
     "static/media/all.min.css": "/static/media/fa-solid-900.afbdcbcc.woff",
+    "static/media/felix_bach.68214e92.png": "/static/media/felix_bach.68214e92.png",
     "static/media/frank.25e34019.png": "/static/media/frank.25e34019.png",
+    "static/media/isabella_peters.29253750.jpg": "/static/media/isabella_peters.29253750.jpg",
     "static/media/jupyter.9882b1f8.png": "/static/media/jupyter.9882b1f8.png",
     "static/media/jupyterhub-logo.fcb79533.png": "/static/media/jupyterhub-logo.fcb79533.png",
     "static/media/logo.103b5fa1.svg": "/static/media/logo.103b5fa1.svg",
@@ -39,6 +41,6 @@
     "static/css/2.74143ea4.chunk.css",
     "static/js/2.ee027236.chunk.js",
     "static/css/main.ff846796.chunk.css",
-    "static/js/main.b7bde824.chunk.js"
+    "static/js/main.645671b1.chunk.js"
   ]
 }

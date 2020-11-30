@@ -27,13 +27,14 @@ function Team() {
                 <TeamCard title="Dr. Frank Biedermann" buttonTitle="Institute INT" link="https://www.int.kit.edu/staff_2034.php#" maxWidth="20rem"  cardImage={frank} imgClass="black_white_img" buttonColor="primary" />
                 <TeamCard title="Dr. Tobias Käfer" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Tobias_K%C3%A4fer/en" maxWidth="20rem" cardImage={tobias} imgClass="black_white_img" buttonColor="primary" />
               </CardDeck>
+            </Row>
+            <Row className="pt-3 justify-content-md-center">
               <CardDeck className="col-10 justify-content-md-center">
                 <TeamCard title="Dr. Michael Färber" buttonTitle="Institute AIFB" link="https://www.aifb.kit.edu/web/Michael_F%C3%A4rber" maxWidth="20rem"  cardImage={michael} imgClass="black_white_img" buttonColor="primary" />
                 <TeamCard title="Dr.-Ing. Axel Loewe" buttonTitle="Institute IBT" link="https://www.ibt.kit.edu/loewe.php" maxWidth="20rem"  cardImage={axel} imgClass="black_white_img" buttonColor="primary" />
                 <TeamCard title="Dr. Manuel Tsotsalas " buttonTitle="Institute IFG" link="https://www.ifg.kit.edu/english/21_1420.php" maxWidth="20rem"  cardImage={manuel} imgClass="black_white_img" buttonColor="primary" />
               </CardDeck>
             </Row>
-
 
           </div>
         </Container>

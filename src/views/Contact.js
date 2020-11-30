@@ -12,7 +12,7 @@ class Contact extends React.Component {
           You very welcome to contribute to any of our application <emphasize>via</emphasize> GitHub <a href="https://github.com/ASDSE">ASDSE</a>.
         </p>
         <p>
-          Also please feel free to contact us <emphasize>via</emphasize> the E-Mail Adresses of our team members. Quick contact: <a href="mailto: stephan.sinn@kit.edu"> Send E-Mail </a>
+          Also please feel free to contact us <emphasize>via</emphasize> E-Mail: <a href="mailto:frank.biedermann@kit.edu" className="font-weight-bold"> Dr. Frank Biedermann </a>
         </p>
 
       </Container >

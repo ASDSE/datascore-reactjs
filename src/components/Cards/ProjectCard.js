@@ -74,10 +74,8 @@ class TeamCard extends React.Component {
             }}
           />
         <CardBody className="flex-column d-flex">
-            <CardTitle>{this.props.title}</CardTitle>
-            <CardText style={{
-                textAlign: "justify",
-              }}>
+            <CardTitle className="text-center">{this.props.title}</CardTitle>
+            <CardText className="text-center">
               {this.props.text}
             </CardText>
 

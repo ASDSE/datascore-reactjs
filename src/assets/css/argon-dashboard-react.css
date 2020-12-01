@@ -14389,3 +14389,10 @@ button:focus, :focus {
   background-color: #add8e65e;
   border-color: #add8e65e;
 }
+
+.cites {
+  padding: 1.25rem;
+  border: 1px solid #e6ecf1;
+  border-radius: .25rem;
+  background-color: #f5f7f9;
+}

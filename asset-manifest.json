@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.9d17a554.chunk.css",
-    "main.js": "/static/js/main.71d72833.chunk.js",
-    "main.js.map": "/static/js/main.71d72833.chunk.js.map",
+    "main.js": "/static/js/main.9f41ed04.chunk.js",
+    "main.js.map": "/static/js/main.9f41ed04.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.87298431.js",
     "runtime-main.js.map": "/static/js/runtime-main.87298431.js.map",
     "static/css/2.74143ea4.chunk.css": "/static/css/2.74143ea4.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.74143ea4.chunk.css.map": "/static/css/2.74143ea4.chunk.css.map",
     "static/css/main.9d17a554.chunk.css.map": "/static/css/main.9d17a554.chunk.css.map",
     "static/js/2.670f3202.chunk.js.LICENSE.txt": "/static/js/2.670f3202.chunk.js.LICENSE.txt",
-    "static/js/main.71d72833.chunk.js.LICENSE.txt": "/static/js/main.71d72833.chunk.js.LICENSE.txt",
+    "static/js/main.9f41ed04.chunk.js.LICENSE.txt": "/static/js/main.9f41ed04.chunk.js.LICENSE.txt",
     "static/media/Approach.77988120.PNG": "/static/media/Approach.77988120.PNG",
     "static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png": "/static/media/DataScore-Logo-Web-WhiteText.35b5d6cb.png",
     "static/media/LogoKIT.6d64b848.svg": "/static/media/LogoKIT.6d64b848.svg",
@@ -44,6 +44,6 @@
     "static/css/2.74143ea4.chunk.css",
     "static/js/2.670f3202.chunk.js",
     "static/css/main.9d17a554.chunk.css",
-    "static/js/main.71d72833.chunk.js"
+    "static/js/main.9f41ed04.chunk.js"
   ]
 }

@@ -60,17 +60,17 @@ class Schema extends React.Component {
             </footer>
           </blockquote>
           <p>
-            It proposes a standardized format for research data, i.e. datasets, reports which helps to compare research data and to analyze its reuse.
+            It proposes a standardized format for research data, i.e. datasets-reports which help to compare research data and to analyze its reuse.
 
           </p>
           <p>
-            We use the Github project <a href="https://github.com/CDLUC3/counter-processor" target="_blank" rel="noreferrer" className="font-weight-bold">Counter-processor</a> to create dataset reports following the COUNTER Code of Practice for Research Data. The expected format of logs is significantly different from the available logs’ format. For this reason, existing logs are parsed, the required information is extracted, and new log files are created in the format that is compatible with the Counter-processor.  These newly created log files are then processed by the Counter-processor to create standardized research data reports.
+            We use the Github project <a href="https://github.com/CDLUC3/counter-processor" target="_blank" rel="noreferrer" className="font-weight-bold">Counter-processor</a> to create dataset reports following the COUNTER Code of Practice for Research Data. The expected format of logs is significantly different from typically available logs’ format. For this reason, existing logs are parsed, the required information is extracted, and new log files are created in the format that is compatible with the Counter-processor.  These newly created log files are then processed by the Counter-processor to create standardized research data reports.
           </p>
           <p>
             <img src={Approach}></img>
           </p>
           <p>
-            By this approach, the pre-implemented Counter-processor can be used to easily create dataset reports in the standardized format using the COUNTER Code of Practice for Research Data. Since the original logs are not edited but simply parsed, the remaining implementation concerning theses logs does not need to be changed.
+            Since the original logs are not edited but simply parsed, the remaining implementation concerning the normal logs do not need to be changed.
           </p>
           <h4>Log Parsing</h4>
           <p>
@@ -82,11 +82,11 @@ class Schema extends React.Component {
             </ul>
           </p>
           <p>
-            The newly created log displays the events in a tab separated table, where each row  represents an event and each column an event’s attribute, e.g. event time, client IP etc. Unavailable attributes as well as a dataset’s metadata are left blank. In the creation of new log files, it is ensured that one log file per day exists that captures all events of this day.
+            The newly created log displays the events in a tab separated table, where each row represents an event and each column an event’s attribute, e.g. event time, client IP etc. Unavailable attributes as well as a dataset’s metadata are left blank. In the creation of new log files, it is ensured that one log file per day exists that captures all events of this day.
           </p>
           <h4>Report creation</h4>
           <p>
-            For each month one report following the COUNTER Code of Practice for Research Data is created by the processing the created log files by the counter-processor. A report thereby consists of a heading with metadata on the report and a body listing all datasets that were investigated or downloaded during the month and their corresponding statistics. The statistics consist of the attributes Total_Dataset_Investigations, Unique_Dataset_Investigations, Total_Dataset_Requests and Unique_Dataset_Requests. Total attributes count all events (except double-clicks) whereas for unique attributes all activities of one user are represented by one unique event. Investigation refers to all user activities on a dataset and requests are all user activities that retrieve or view the dataset itself. An example of a report can be seen below.
+            For each month one report following the COUNTER Code of Practice for Research Data is created. A report thereby consists of a heading with metadata on the report and a body listing all datasets that were investigated or downloaded during the passed month and their corresponding statistics. The statistics consist of the attributes Total_Dataset_Investigations, Unique_Dataset_Investigations, Total_Dataset_Requests and Unique_Dataset_Requests. Total attributes count all events (except double-clicks) whereas for unique attributes all activities of one user are represented by one unique event. Investigation refers to all user activities on a dataset and requests are all user activities that retrieve or view the dataset itself. An example of a report can be seen below.
           </p>
           <img src={Sample_Report}></img>
           <p>

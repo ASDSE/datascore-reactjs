@@ -34,7 +34,7 @@ class About extends React.Component {
 
           </p>
           <p>
-            As a project of the Karlsruhe Institute of Technology being the University of the Helmholtz Research Society, DataScore aspires to provide also recommendations for education and graduation processes.
+            As a project of the Karlsruhe Institute of Technology being the University in the Helmholtz Association, DataScore aspires to provide also recommendations for education and graduation processes.
           </p>
           <p>
             Please view the <Link to="/projects" className="font-weight-bold"> projects </Link> site for details.

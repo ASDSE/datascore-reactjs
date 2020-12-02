@@ -21,6 +21,8 @@ import React from "react";
 // reactstrap components
 import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
 import LogoKIT from "assets/img/brand/LogoKIT.svg";
+import LogoMWK from "assets/img/brand/Logo_MWK.jpg";
+import LogoBMBF from "assets/img/brand/Logo_BMBF.jpg";
 import {Link}  from 'react-router-dom'
 class Footer extends React.Component {
   render() {
@@ -54,6 +56,24 @@ class Footer extends React.Component {
                 <Link to="/about" >
                   About
                 </Link>
+              </NavItem>
+              <NavItem className="pl-2">
+
+                <img
+                  alt="..."
+                  src={LogoBMBF}
+                  height='50'
+                />
+
+              </NavItem>
+              <NavItem className="pl-2">
+
+                <img
+                  alt="..."
+                  src={LogoMWK}
+                  height='50'
+                />
+
               </NavItem>
               <NavItem className="pl-2">
 

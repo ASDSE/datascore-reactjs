@@ -21,6 +21,7 @@
   import Schema from "views/projects/Schema";
   import SemanticWeb from "views/projects/SemanticWeb";
   import Navbars from "components/Navbars/Navbars.js";
+  import ScrollToTop from "components/Navbars/ScrollToTop.js";
   import Footer from "components/Footers/MainFooter"
 
   import ApolloApp from "ApolloApp"
@@ -32,7 +33,8 @@
             <ApolloProvider client={client}>
               <Router>
                 <Navbars />
-                <Switch>
+                  <ScrollToTop>
+                    <Switch>
                   <Route exact path="/" component={App} />
                   <Route exact path="/projects" component={ProjectCards} />
                   <Route exact path="/contact" component={Contact} />
@@ -44,13 +46,14 @@
                   <Route exact path="/education" component={Education} />
                   <Route exact path="/semantic" component={SemanticWeb} />
                   <Route exact path="/schema" component={Schema} />
-
-
                   <Route component={Error404} />
+
+
 
                 </Switch>
                 <Footer/>
-              </Router>
+              </ScrollToTop>
+            </Router>
             </ApolloProvider>
           </div>
   );

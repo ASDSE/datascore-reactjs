@@ -46,7 +46,7 @@ class Schema extends React.Component {
         <h2>SUSHI Reports</h2>
           <p>
             Metrics on datasets need certain numbers such as download, view and citation counts. The latter is realized by persient identifiers (e.g. DOI) registered at DAtaCite <em>via</em> the above mentioned schema. Download and view counts should be reported regularly by the repository following the <a href="https://www.projectcounter.org/" target="_blank" rel="noreferrer" className="font-weight-bold">COUNTER Code of Practice for Research Data</a> in the
-          <a href="https://github.com/datacite/sashimi/blob/master/lib/sushi_schema/sushi_usage_schema.json" target="_blank" rel="noreferrer" className="font-weight-bold"> SUSHI standard </a> <em>via</em>
+          <a href="https://github.com/datacite/sashimi/blob/master/lib/sushi_schema/sushi_usage_schema.json" target="_blank" rel="noreferrer" className="font-weight-bold"> SUSHI standard </a> (SUSHI - Standardized Usage Statistics Harvesting Initiative) <em>via</em>
             <a href="https://support.datacite.org/docs/usage-reports-api-guide" target="_blank" rel="noreferrer" className="font-weight-bold"> the DataCite Usage Reports API</a>.
               We will describe a way for a generic implementation by analyzing log files.
           </p>
@@ -67,7 +67,7 @@ class Schema extends React.Component {
             We use the Github project <a href="https://github.com/CDLUC3/counter-processor" target="_blank" rel="noreferrer" className="font-weight-bold">Counter-processor</a> to create dataset reports following the COUNTER Code of Practice for Research Data. The expected format of logs is significantly different from typically available logs’ format. For this reason, existing logs are parsed, the required information is extracted, and new log files are created in the format that is compatible with the Counter-processor.  These newly created log files are then processed by the Counter-processor to create standardized research data reports.
           </p>
           <p>
-            <img src={Approach}></img>
+            <img src={Approach} alt="Approach"></img>
           </p>
           <p>
             Since the original logs are not edited but simply parsed, the remaining implementation concerning the normal logs do not need to be changed.
@@ -88,7 +88,7 @@ class Schema extends React.Component {
           <p>
             For each month one report following the COUNTER Code of Practice for Research Data is created. A report thereby consists of a heading with metadata on the report and a body listing all datasets that were investigated or downloaded during the passed month and their corresponding statistics. The statistics consist of the attributes Total_Dataset_Investigations, Unique_Dataset_Investigations, Total_Dataset_Requests and Unique_Dataset_Requests. Total attributes count all events (except double-clicks) whereas for unique attributes all activities of one user are represented by one unique event. Investigation refers to all user activities on a dataset and requests are all user activities that retrieve or view the dataset itself. An example of a report can be seen below.
           </p>
-          <img src={Sample_Report}></img>
+          <img src={Sample_Report} alt="Sample Report"></img>
           <p>
             For any questions please contact: <a href="mailto:michael.faerber@kit.edu" >Dr. Michael Färber</a> or
             <a href="mailto:stephan.sinn@kit.edu"> Dr. Stephan Sinn</a>.

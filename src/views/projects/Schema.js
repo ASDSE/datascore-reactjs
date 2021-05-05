@@ -11,8 +11,8 @@ class Schema extends React.Component {
         <h1><i className="fas fa-database" /> Schema and SUSHI</h1>
         <h2>DataCite's Schema Implementation</h2>
           <p>
-            In order to provide meaningful datasets on a database or repository appropriate meta data is needed and thus a decent schema is necessary.
-            An implementation of DataCite's Schema is conducted as an example on the <a href="https://suprabank.org" target="_blank" rel="noreferrer" className="font-weight-bold">SupraBank</a> repository. This example is based on the Ruby on Rails framework and resulting guide will be presented here.
+            In order to provide meaningful datasets in a database or repository appropriate meta data is needed and thus a decent schema is necessary.
+            An implementation of DataCite's Schema is conducted as an example on the <a href="https://suprabank.org" target="_blank" rel="noreferrer" className="font-weight-bold">SupraBank</a> repository. This example is based on the Ruby on Rails framework and the resulting guide will be presented here.
           </p>
           <h3>PID implementation</h3>
           <p>
@@ -20,16 +20,16 @@ class Schema extends React.Component {
             <ol>
               <li>DOI</li>
                 <ul>
-                  <li>The <a  href="https://www.forschungsdaten.info/praxis-kompakt/english-pages/glossary/#c460412" target="_blank" rel="noreferrer" className="font-weight-bold">Digital Object Identifier</a> enables the persistent idendification of ditial documents in general. </li>
+                  <li>The <a  href="https://www.forschungsdaten.info/praxis-kompakt/english-pages/glossary/#c460412" target="_blank" rel="noreferrer" className="font-weight-bold">Digital Object Identifier</a> enables the persistent idendification of digital documents in general. </li>
                   <li>In the virtue of the DataScore project the DOI is used to identify datasets, that are hosted by a repository.</li>
-                  <li>The implementation is the final step and allowing the registration of DOIs at DataCite including meaningful meta data</li>
+                  <li>The implementation is the final step and allows the registration of DOIs at DataCite including meaningful meta data.</li>
               </ul>
               <li>ORCID</li>
                 <ul>
                   <li>The <a  href="https://orcid.org/" target="_blank" rel="noreferrer" className="font-weight-bold"> Open Researcher and Contributor ID</a> enables the idendification of researchers and students. </li>
                   <li>In the virtue of the DataScore project the ORCID is used to identify creators and contributors to the datasets.</li>
                   <li>ORCID can be easily implemented by manually providing the ORCID id and url.</li>
-                  <li>On account of an enhanced user experience we recommend the use of the free public <a href="https://orcid.org/organizations/integrators/API" target="_blank" rel="noreferrer" className="font-weight-bold">ORCID API</a> for information retrieval. On account of the massive information to be retreived from ORCID we recommend a seperate request from the user.</li>
+                  <li>On account of an enhanced user experience we recommend the use of the free public <a href="https://orcid.org/organizations/integrators/API" target="_blank" rel="noreferrer" className="font-weight-bold">ORCID API</a> for information retrieval. Due to the massive information retrieved from ORCID (and thus probably long response time) we recommend a seperate request from the user.</li>
                 </ul>
               <li>ROR</li>
                 <ul>
@@ -45,7 +45,7 @@ class Schema extends React.Component {
           </p>
         <h2>SUSHI Reports</h2>
           <p>
-            Metrics on datasets need certain numbers such as download, view and citation counts. The latter is realized by persient identifiers (e.g. DOI) registered at DAtaCite <em>via</em> the above mentioned schema. Download and view counts should be reported regularly by the repository following the <a href="https://www.projectcounter.org/" target="_blank" rel="noreferrer" className="font-weight-bold">COUNTER Code of Practice for Research Data</a> in the
+            Metrics on datasets need certain numbers such as download, view and citation counts. The latter is realized by persient identifiers (e.g. DOI) registered at DataCite <em>via</em> the above mentioned schema. Download and view counts should be reported regularly by the repository following the <a href="https://www.projectcounter.org/" target="_blank" rel="noreferrer" className="font-weight-bold">COUNTER Code of Practice for Research Data</a> in the
           <a href="https://github.com/datacite/sashimi/blob/master/lib/sushi_schema/sushi_usage_schema.json" target="_blank" rel="noreferrer" className="font-weight-bold"> SUSHI standard </a> (SUSHI - Standardized Usage Statistics Harvesting Initiative) <em>via</em>
             <a href="https://support.datacite.org/docs/usage-reports-api-guide" target="_blank" rel="noreferrer" className="font-weight-bold"> the DataCite Usage Reports API</a>.
               We will describe a way for a generic implementation by analyzing log files.
